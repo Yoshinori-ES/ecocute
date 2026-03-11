@@ -31,7 +31,7 @@ export const companyPage = (c: Context) => {
             <tr><th class="px-4 py-3 text-left bg-gray-50 font-bold">TEL</th><td class="px-4 py-3"><a href="tel:05017201813" class="text-orange-600 font-bold hover:underline">050-1720-1813</a><span class="text-xs text-gray-500 ml-1">（対話型AI受付）</span></td></tr>
             <tr><th class="px-4 py-3 text-left bg-gray-50 font-bold">FAX</th><td class="px-4 py-3">050-1808-3052</td></tr>
             <tr><th class="px-4 py-3 text-left bg-gray-50 font-bold">Mail</th><td class="px-4 py-3"><a href="mailto:kaden@estech.info" class="text-blue-600 hover:underline">kaden@estech.info</a></td></tr>
-            <tr><th class="px-4 py-3 text-left bg-gray-50 font-bold">取扱メーカー</th><td class="px-4 py-3">三菱電機、HITACHI、TOSHIBA、DAIKIN、CORONA</td></tr>
+            <tr><th class="px-4 py-3 text-left bg-gray-50 font-bold">取扱メーカー</th><td class="px-4 py-3">Panasonic、三菱電機、HITACHI、TOSHIBA、DAIKIN、CORONA、ノーリツ</td></tr>
             <tr><th class="px-4 py-3 text-left bg-gray-50 font-bold">保険</th><td class="px-4 py-3">事業賠償・費用総合保険、業務災害総合保険</td></tr>
           </tbody>
         </table>

@@ -202,6 +202,7 @@ export function layout(options: LayoutOptions, content: string): string {
   <meta name="description" content="${description}">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="${canonical}">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>" type="image/svg+xml">
   
   <!-- OGP -->
   <meta property="og:title" content="${title}">

@@ -150,11 +150,13 @@ export const subsidyPage = (c: Context) => {
     <div class="section-fade">
       <h2 class="text-xl font-black mb-4 flex items-center gap-2"><span class="w-2 h-8 bg-purple-500 rounded-full"></span>補助金対応取扱メーカー</h2>
       <div class="flex flex-wrap gap-3">
+        <div class="bg-white rounded-xl border border-gray-200 px-5 py-3 flex items-center gap-2"><i class="fas fa-industry text-blue-500"></i><span class="font-bold">Panasonic</span></div>
         <div class="bg-white rounded-xl border border-gray-200 px-5 py-3 flex items-center gap-2"><i class="fas fa-industry text-red-500"></i><span class="font-bold">三菱電機</span></div>
         <div class="bg-white rounded-xl border border-gray-200 px-5 py-3 flex items-center gap-2"><i class="fas fa-industry text-red-600"></i><span class="font-bold">HITACHI</span></div>
         <div class="bg-white rounded-xl border border-gray-200 px-5 py-3 flex items-center gap-2"><i class="fas fa-industry text-red-700"></i><span class="font-bold">TOSHIBA</span></div>
         <div class="bg-white rounded-xl border border-gray-200 px-5 py-3 flex items-center gap-2"><i class="fas fa-industry text-blue-600"></i><span class="font-bold">DAIKIN</span></div>
         <div class="bg-white rounded-xl border border-gray-200 px-5 py-3 flex items-center gap-2"><i class="fas fa-industry text-blue-700"></i><span class="font-bold">CORONA</span></div>
+        <div class="bg-white rounded-xl border border-gray-200 px-5 py-3 flex items-center gap-2"><i class="fas fa-industry text-gray-600"></i><span class="font-bold">ノーリツ</span></div>
       </div>
       <p class="text-xs text-gray-500 mt-2">各メーカーの補助金対象モデルからご提案いたします。</p>
     </div>

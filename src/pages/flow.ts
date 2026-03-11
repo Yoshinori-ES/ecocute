@@ -91,7 +91,7 @@ export const flowPage = (c: Context) => {
           <div class="w-12 h-12 bg-gradient-to-br from-sky-500 to-sky-700 text-white rounded-full flex items-center justify-center text-sm font-black flex-shrink-0 shadow-lg z-10 border-4 border-white">7</div>
           <div class="bg-sky-50 rounded-2xl shadow-sm border-2 border-sky-200 p-5 flex-1">
             <h3 class="font-bold text-lg mb-1"><i class="fas fa-tools text-sky-600 mr-2"></i>施工</h3>
-            <p class="text-sm text-gray-600 leading-relaxed">施工箇所と方法をお客様に確認した上で着工。<strong>有資格者が責任を持って施工</strong>いたします。メーカー5社の製品を取り扱い、最適な機器をご提案します。</p>
+            <p class="text-sm text-gray-600 leading-relaxed">施工箇所と方法をお客様に確認した上で着工。<strong>有資格者が責任を持って施工</strong>いたします。主要7メーカーの製品を取り扱い、最適な機器をご提案します。</p>
           </div>
         </div>
 

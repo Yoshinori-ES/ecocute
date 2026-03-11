@@ -164,7 +164,7 @@ const serviceCategories: ServiceCategory[] = [
       </h3>
       <p class="text-sm text-gray-600 leading-relaxed mb-3">
         エコキュートの寿命は一般的に<strong>10〜15年</strong>と言われています。${city.name}でエコキュートの交換をお考えなら、
-        <strong>全メーカー対応</strong>の当社にお任せください。三菱電機・日立・東芝・ダイキン・コロナなど、お客様のご要望に合わせた最適な機種をご提案します。
+        <strong>全メーカー対応</strong>の当社にお任せください。Panasonic・三菱電機・日立・東芝・ダイキン・コロナ・ノーリツなど、お客様のご要望に合わせた最適な機種をご提案します。
       </p>
       <ul class="space-y-1.5 text-sm text-gray-600">
         <li class="flex items-start gap-2"><i class="fas fa-check-circle text-green-500 mt-0.5"></i>既設エコキュートからの入替工事</li>
@@ -446,7 +446,7 @@ function generateCityPage(city: CityData, category: ServiceCategory): string {
         <div class="bg-white rounded-xl p-4 text-center shadow-sm">
           <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3"><i class="fas fa-certificate text-blue-500 text-xl"></i></div>
           <h3 class="font-bold text-sm mb-1">有資格者多数在籍</h3>
-          <p class="text-xs text-gray-500">給水装置主任技術者・電気工事士・管工事施工管理士など<strong>18種類の資格</strong>を保有したスタッフが対応。</p>
+          <p class="text-xs text-gray-500">給水装置主任技術者・電気工事士・管工事施工管理士など<strong>15種類以上の資格</strong>を保有したスタッフが対応。</p>
         </div>
         <div class="bg-white rounded-xl p-4 text-center shadow-sm">
           <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-3"><i class="fas fa-hand-holding-heart text-green-500 text-xl"></i></div>
@@ -506,7 +506,7 @@ export function createCityPageHandler(citySlug: string, categorySlug: string) {
 
     const content = generateCityPage(city, category)
     return c.html(layout({
-      title: `${city.name}の${category.pageTitle}｜交換・修理なら地域のエコキュート専門店（イーエス・テック）`,
+      title: `${city.name}の${category.pageTitle}｜地域のエコキュート専門店（イーエス・テック）`,
       description: `${city.name}${category.metaDesc}`,
       canonical: `https://estech-ecocute.pages.dev/area/${city.slug}/${category.slug}`,
       structuredData: {

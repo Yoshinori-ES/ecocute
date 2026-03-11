@@ -22,52 +22,62 @@ export const areaPage = (c: Context) => {
         <h2 class="text-xl font-black mb-4">対応市町一覧</h2>
         <div class="space-y-3">
           <!-- 拠点 -->
-          <div class="bg-orange-50 rounded-xl border-2 border-orange-200 p-4">
+          <a href="/area/fukuroi" class="bg-orange-50 rounded-xl border-2 border-orange-200 p-4 block hover:border-orange-400 transition-colors">
             <div class="flex items-center gap-3">
               <div class="w-10 h-10 bg-orange-500 text-white rounded-full flex items-center justify-center"><i class="fas fa-map-pin"></i></div>
               <div>
                 <h3 class="font-bold text-lg">袋井市<span class="text-xs text-orange-500 ml-2">（本社拠点）</span></h3>
                 <p class="text-xs text-gray-500">エコキュートの交換・修理・新規導入に対応</p>
               </div>
+              <i class="fas fa-chevron-right text-orange-300 ml-auto"></i>
             </div>
-          </div>
+          </a>
 
-          <div class="bg-white rounded-xl border border-gray-200 p-4 flex items-center gap-3 card-hover">
+          <a href="/area/iwata" class="bg-white rounded-xl border border-gray-200 p-4 flex items-center gap-3 card-hover">
             <div class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0"><i class="fas fa-map-marker-alt text-gray-400"></i></div>
             <div><h3 class="font-bold">磐田市</h3><p class="text-xs text-gray-500">袋井市の東隣。迅速に対応可能です。</p></div>
-          </div>
-          <div class="bg-white rounded-xl border border-gray-200 p-4 flex items-center gap-3 card-hover">
+            <i class="fas fa-chevron-right text-gray-300 ml-auto"></i>
+          </a>
+          <a href="/area/kakegawa" class="bg-white rounded-xl border border-gray-200 p-4 flex items-center gap-3 card-hover">
             <div class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0"><i class="fas fa-map-marker-alt text-gray-400"></i></div>
             <div><h3 class="font-bold">掛川市</h3><p class="text-xs text-gray-500">袋井市の西隣。多数の施工実績があります。</p></div>
-          </div>
-          <div class="bg-white rounded-xl border border-gray-200 p-4 flex items-center gap-3 card-hover">
+            <i class="fas fa-chevron-right text-gray-300 ml-auto"></i>
+          </a>
+          <a href="/area/morimachi" class="bg-white rounded-xl border border-gray-200 p-4 flex items-center gap-3 card-hover">
             <div class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0"><i class="fas fa-map-marker-alt text-gray-400"></i></div>
             <div><h3 class="font-bold">森町</h3><p class="text-xs text-gray-500">山間部も含め対応いたします。</p></div>
-          </div>
-          <div class="bg-white rounded-xl border border-gray-200 p-4 flex items-center gap-3 card-hover">
+            <i class="fas fa-chevron-right text-gray-300 ml-auto"></i>
+          </a>
+          <a href="/area/hamamatsu" class="bg-white rounded-xl border border-gray-200 p-4 flex items-center gap-3 card-hover">
             <div class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0"><i class="fas fa-map-marker-alt text-gray-400"></i></div>
             <div><h3 class="font-bold">浜松市</h3><p class="text-xs text-gray-500">天竜区・北区を含む広域に対応。</p></div>
-          </div>
-          <div class="bg-white rounded-xl border border-gray-200 p-4 flex items-center gap-3 card-hover">
+            <i class="fas fa-chevron-right text-gray-300 ml-auto"></i>
+          </a>
+          <a href="/area/kikugawa" class="bg-white rounded-xl border border-gray-200 p-4 flex items-center gap-3 card-hover">
             <div class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0"><i class="fas fa-map-marker-alt text-gray-400"></i></div>
             <div><h3 class="font-bold">菊川市</h3><p class="text-xs text-gray-500">掛川市経由でスムーズに対応。</p></div>
-          </div>
-          <div class="bg-white rounded-xl border border-gray-200 p-4 flex items-center gap-3 card-hover">
+            <i class="fas fa-chevron-right text-gray-300 ml-auto"></i>
+          </a>
+          <a href="/area/omaezaki" class="bg-white rounded-xl border border-gray-200 p-4 flex items-center gap-3 card-hover">
             <div class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0"><i class="fas fa-map-marker-alt text-gray-400"></i></div>
             <div><h3 class="font-bold">御前崎市</h3><p class="text-xs text-gray-500">海沿いの地域もお任せください。</p></div>
-          </div>
-          <div class="bg-white rounded-xl border border-gray-200 p-4 flex items-center gap-3 card-hover">
+            <i class="fas fa-chevron-right text-gray-300 ml-auto"></i>
+          </a>
+          <a href="/area/makinohara" class="bg-white rounded-xl border border-gray-200 p-4 flex items-center gap-3 card-hover">
             <div class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0"><i class="fas fa-map-marker-alt text-gray-400"></i></div>
             <div><h3 class="font-bold">牧之原市</h3><p class="text-xs text-gray-500">静岡空港周辺エリアも対応。</p></div>
-          </div>
-          <div class="bg-white rounded-xl border border-gray-200 p-4 flex items-center gap-3 card-hover">
+            <i class="fas fa-chevron-right text-gray-300 ml-auto"></i>
+          </a>
+          <a href="/area/shimada" class="bg-white rounded-xl border border-gray-200 p-4 flex items-center gap-3 card-hover">
             <div class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0"><i class="fas fa-map-marker-alt text-gray-400"></i></div>
             <div><h3 class="font-bold">島田市</h3><p class="text-xs text-gray-500">中部エリアまでカバー。</p></div>
-          </div>
-          <div class="bg-white rounded-xl border border-gray-200 p-4 flex items-center gap-3 card-hover">
+            <i class="fas fa-chevron-right text-gray-300 ml-auto"></i>
+          </a>
+          <a href="/area/yoshida" class="bg-white rounded-xl border border-gray-200 p-4 flex items-center gap-3 card-hover">
             <div class="w-8 h-8 bg-gray-100 rounded-full flex items-center justify-center flex-shrink-0"><i class="fas fa-map-marker-alt text-gray-400"></i></div>
             <div><h3 class="font-bold">吉田町</h3><p class="text-xs text-gray-500">榛原郡吉田町も対応範囲。</p></div>
-          </div>
+            <i class="fas fa-chevron-right text-gray-300 ml-auto"></i>
+          </a>
         </div>
         <p class="text-xs text-gray-400 mt-3">※上記以外のエリアも対応可能な場合がございます。お気軽にお問い合わせください。</p>
       </div>

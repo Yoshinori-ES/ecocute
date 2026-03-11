@@ -83,7 +83,7 @@ export const topPage = (c: Context) => {
                   <div class="text-xs text-sky-200">保有資格数</div>
                 </div>
                 <div class="bg-white/10 rounded-xl p-3">
-                  <div class="text-2xl font-black text-orange-300">5社</div>
+                  <div class="text-2xl font-black text-orange-300">7社</div>
                   <div class="text-xs text-sky-200">取扱メーカー</div>
                 </div>
                 <div class="bg-white/10 rounded-xl p-3">
@@ -278,6 +278,10 @@ export const topPage = (c: Context) => {
     <h2 class="text-2xl md:text-3xl font-black mb-6">取扱い<span class="gradient-text">メーカー</span></h2>
     <div class="flex flex-wrap justify-center gap-4 md:gap-6">
       <div class="bg-gray-50 rounded-xl px-6 py-4 border border-gray-200 flex items-center gap-2 card-hover">
+        <i class="fas fa-industry text-blue-500"></i>
+        <span class="font-bold text-gray-700">Panasonic</span>
+      </div>
+      <div class="bg-gray-50 rounded-xl px-6 py-4 border border-gray-200 flex items-center gap-2 card-hover">
         <i class="fas fa-industry text-red-500"></i>
         <span class="font-bold text-gray-700">三菱電機</span>
       </div>
@@ -297,8 +301,12 @@ export const topPage = (c: Context) => {
         <i class="fas fa-industry text-blue-700"></i>
         <span class="font-bold text-gray-700">CORONA</span>
       </div>
+      <div class="bg-gray-50 rounded-xl px-6 py-4 border border-gray-200 flex items-center gap-2 card-hover">
+        <i class="fas fa-industry text-gray-600"></i>
+        <span class="font-bold text-gray-700">ノーリツ</span>
+      </div>
     </div>
-    <p class="text-sm text-gray-500 mt-4">上記以外のメーカーもお問い合わせください。メニューにないものにも対応可能です。</p>
+    <p class="text-sm text-gray-500 mt-4">主要7メーカーをはじめ、それ以外のメーカーもお問い合わせください。</p>
   </div>
 </section>
 
