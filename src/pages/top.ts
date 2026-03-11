@@ -434,9 +434,9 @@ export const topPage = (c: Context) => {
       <div class="md:flex-1">
         <div class="rounded-xl overflow-hidden shadow-sm border border-gray-200">
           <iframe 
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52198.76!2d137.9!3d34.75!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601b10cd2a4ed02d%3A0x5c4aee11ced7d2a4!2z6KKL5LqV5biC!5e0!3m2!1sja!2sjp!4v1" 
+            src="https://maps.google.com/maps?q=%E9%9D%99%E5%B2%A1%E7%9C%8C%E8%A2%8B%E4%BA%95%E5%B8%82%E5%B1%B1%E7%A7%913229%E7%95%AA%E5%9C%B0%E3%81%AE1&t=m&z=15&output=embed&hl=ja" 
             width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-            title="対応エリアマップ - 袋井市">
+            title="イーエス・テック所在地 - 袋井市山科">
           </iframe>
         </div>
       </div>
