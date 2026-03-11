@@ -314,15 +314,15 @@ export const topPage = (c: Context) => {
       <!-- 事例1: 標準的な交換工事 -->
       <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden card-hover">
         <div class="aspect-[4/3] overflow-hidden bg-gray-100">
-          <img src="https://sspark.genspark.ai/cfimages?u1=6nPRZRTCDiHc2bCZmIWyAHE0pwtg8EjaYGlyQLIwOUGAaKjJabl6SKD2ImpCD9oqTOHVO6%2FTt1HqoI7Naq1gHzJuvp0tSth8Rxa%2BPKt%2FddINtKPDuw%3D%3D&u2=zs2kyQbA8e7E7e7M&width=2560" alt="エコキュート設置工事の様子" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+          <img src="https://sspark.genspark.ai/cfimages?u1=Qes8Xj1Ncocq8FOGcIz7HoeS3edpI%2BpSwZahbZgR2NJbeQUiMBy1LrOjhi53Kjw5eJn3a1I0cW3L0zj5gqgvHE8zmZYK%2B3QYP%2BJqNXwrd%2BDZp88lXqs%2FyvzEf5Y9&u2=%2BkP3WpbfTApj12dI&width=2560" alt="三菱電機エコキュート設置完了後の様子" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
         </div>
         <div class="p-4">
           <div class="flex items-center gap-2 mb-2">
             <span class="bg-orange-100 text-orange-700 text-[10px] font-bold px-2 py-0.5 rounded-full">交換工事</span>
             <span class="bg-gray-100 text-gray-600 text-[10px] px-2 py-0.5 rounded-full">三菱電機</span>
           </div>
-          <h3 class="font-bold text-sm mb-1">エコキュート新規設置工事</h3>
-          <p class="text-xs text-gray-500">基礎工事から配管接続まで、有資格者が丁寧に施工。新品のエコキュートが設置され、快適な給湯環境が整いました。</p>
+          <h3 class="font-bold text-sm mb-1">三菱電機エコキュート交換工事（磐田市）</h3>
+          <p class="text-xs text-gray-500">旧型エコキュートから三菱SRT-Sシリーズへ交換。基礎・配管まわりも丁寧に整備し、清潔感のある仕上がりに。お引き渡し後すぐにお湯が使える状態です。</p>
         </div>
       </div>
 
