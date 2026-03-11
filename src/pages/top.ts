@@ -1,0 +1,592 @@
+import type { Context } from 'hono'
+import { layout } from './layout'
+
+export const topPage = (c: Context) => {
+  const content = `
+<!-- ======= ファーストビュー ======= -->
+<section class="relative overflow-hidden bg-gradient-to-br from-sky-700 via-sky-800 to-sky-900 text-white">
+  <!-- 背景装飾 -->
+  <div class="absolute inset-0 opacity-10">
+    <div class="absolute top-10 right-10 w-64 h-64 bg-orange-400 rounded-full blur-3xl"></div>
+    <div class="absolute bottom-10 left-10 w-48 h-48 bg-blue-300 rounded-full blur-3xl"></div>
+  </div>
+  
+  <div class="relative max-w-6xl mx-auto px-4 py-10 md:py-16">
+    <div class="md:flex md:items-center md:gap-10">
+      <div class="md:flex-1">
+        <!-- 信頼バッジ -->
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="inline-flex items-center gap-1 bg-white/15 backdrop-blur px-3 py-1 rounded-full text-xs font-medium">
+            <i class="fas fa-shield-alt text-green-300"></i>袋井市指定給水装置工事事業者
+          </span>
+          <span class="inline-flex items-center gap-1 bg-white/15 backdrop-blur px-3 py-1 rounded-full text-xs font-medium">
+            <i class="fas fa-robot text-orange-300"></i>AI電話受付で即対応
+          </span>
+        </div>
+        
+        <!-- メインキャッチコピー -->
+        <h1 class="text-3xl md:text-5xl font-black leading-tight mb-4 tracking-tight">
+          お湯が出ない！<br>
+          <span class="text-orange-300">そのお悩み、</span><br>
+          <span class="relative">
+            電話1本で解決します。
+            <span class="absolute -bottom-1 left-0 right-0 h-1 bg-orange-400 rounded-full"></span>
+          </span>
+        </h1>
+        
+        <!-- サブコピー -->
+        <p class="text-base md:text-lg text-sky-100 mb-6 leading-relaxed max-w-lg">
+          静岡県袋井市を中心に、エコキュートの<strong class="text-white">交換・修理・新規導入</strong>を専門で承ります。
+          <strong class="text-orange-200">対話型AIが24時間電話受付</strong>。お見積り0円、強引な営業は一切いたしません。
+        </p>
+        
+        <!-- 補助金バナー -->
+        <a href="/subsidy" class="inline-flex items-center gap-3 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold px-5 py-3 rounded-xl mb-6 shadow-lg transition-all group">
+          <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
+            <i class="fas fa-yen-sign text-xl"></i>
+          </div>
+          <div class="leading-tight">
+            <div class="text-xs text-green-100">給湯省エネ2026事業</div>
+            <div class="text-lg">補助金 最大<span class="text-yellow-300 text-xl">12万円</span></div>
+          </div>
+          <i class="fas fa-chevron-right text-green-200 group-hover:translate-x-1 transition-transform"></i>
+        </a>
+        
+        <!-- CTA ボタン群 -->
+        <div class="flex flex-col sm:flex-row gap-3">
+          <a href="tel:05017201813" class="flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold px-6 py-4 rounded-xl text-lg shadow-xl transition-all active:scale-95">
+            <i class="fas fa-phone-alt animate-pulse-slow"></i>
+            <div class="leading-tight">
+              <div class="text-[10px] font-normal text-orange-100">対話型AIがスムーズにご案内</div>
+              <div>050-1720-1813</div>
+            </div>
+          </a>
+          <a href="mailto:kaden@estech.info" class="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur border border-white/30 text-white font-bold px-6 py-4 rounded-xl transition-all active:scale-95">
+            <i class="fas fa-envelope"></i>
+            <span>メールで問い合わせ</span>
+          </a>
+        </div>
+      </div>
+      
+      <!-- 右側ビジュアル -->
+      <div class="hidden md:block md:flex-1">
+        <div class="relative">
+          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
+            <div class="text-center">
+              <div class="w-24 h-24 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4 animate-float shadow-2xl">
+                <i class="fas fa-fire text-white text-4xl"></i>
+              </div>
+              <div class="text-xl font-bold mb-3">創業22年の実績</div>
+              <div class="grid grid-cols-2 gap-3">
+                <div class="bg-white/10 rounded-xl p-3">
+                  <div class="text-2xl font-black text-orange-300">15+</div>
+                  <div class="text-xs text-sky-200">保有資格数</div>
+                </div>
+                <div class="bg-white/10 rounded-xl p-3">
+                  <div class="text-2xl font-black text-orange-300">5社</div>
+                  <div class="text-xs text-sky-200">取扱メーカー</div>
+                </div>
+                <div class="bg-white/10 rounded-xl p-3">
+                  <div class="text-2xl font-black text-orange-300">10市町</div>
+                  <div class="text-xs text-sky-200">対応エリア</div>
+                </div>
+                <div class="bg-white/10 rounded-xl p-3">
+                  <div class="text-2xl font-black text-orange-300">0円</div>
+                  <div class="text-xs text-sky-200">お見積り無料</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= お困りごと導線（3カラム） ======= -->
+<section class="py-10 md:py-14 px-4 bg-white">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-center text-2xl md:text-3xl font-black mb-2">
+      <span class="gradient-text">今、どのような状況ですか？</span>
+    </h2>
+    <p class="text-center text-gray-500 text-sm mb-8">お悩みに合わせて最適なページへご案内します</p>
+    
+    <div class="grid md:grid-cols-3 gap-4">
+      <!-- 緊急：漏水・故障 -->
+      <a href="/leak" class="block bg-gradient-to-br from-red-50 to-orange-50 border-2 border-red-200 hover:border-red-400 rounded-2xl p-6 transition-all card-hover group">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-12 h-12 bg-red-100 rounded-xl flex items-center justify-center group-hover:bg-red-200 transition-colors">
+            <i class="fas fa-exclamation-triangle text-red-500 text-xl"></i>
+          </div>
+          <div>
+            <span class="text-[10px] bg-red-500 text-white px-2 py-0.5 rounded-full font-bold">緊急</span>
+            <h3 class="text-lg font-bold text-gray-800 mt-1">漏水・故障でお困り</h3>
+          </div>
+        </div>
+        <p class="text-sm text-gray-600 mb-3">お湯が出ない、水漏れしている…。まずは落ち着いて、応急処置をご確認ください。</p>
+        <span class="text-red-500 text-sm font-bold group-hover:underline">応急処置を確認する <i class="fas fa-arrow-right ml-1"></i></span>
+      </a>
+      
+      <!-- エラーコード -->
+      <a href="/error-codes" class="block bg-gradient-to-br from-amber-50 to-yellow-50 border-2 border-amber-200 hover:border-amber-400 rounded-2xl p-6 transition-all card-hover group">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-12 h-12 bg-amber-100 rounded-xl flex items-center justify-center group-hover:bg-amber-200 transition-colors">
+            <i class="fas fa-search text-amber-600 text-xl"></i>
+          </div>
+          <div>
+            <span class="text-[10px] bg-amber-500 text-white px-2 py-0.5 rounded-full font-bold">調べる</span>
+            <h3 class="text-lg font-bold text-gray-800 mt-1">エラーが出ている</h3>
+          </div>
+        </div>
+        <p class="text-sm text-gray-600 mb-3">リモコンにエラーコードが表示？メーカー別に原因と対処法を一覧で確認できます。</p>
+        <span class="text-amber-600 text-sm font-bold group-hover:underline">エラーコードを調べる <i class="fas fa-arrow-right ml-1"></i></span>
+      </a>
+      
+      <!-- 交換・導入検討 -->
+      <a href="/flow" class="block bg-gradient-to-br from-sky-50 to-blue-50 border-2 border-sky-200 hover:border-sky-400 rounded-2xl p-6 transition-all card-hover group">
+        <div class="flex items-center gap-3 mb-3">
+          <div class="w-12 h-12 bg-sky-100 rounded-xl flex items-center justify-center group-hover:bg-sky-200 transition-colors">
+            <i class="fas fa-sync-alt text-sky-600 text-xl"></i>
+          </div>
+          <div>
+            <span class="text-[10px] bg-sky-500 text-white px-2 py-0.5 rounded-full font-bold">検討中</span>
+            <h3 class="text-lg font-bold text-gray-800 mt-1">交換・導入を検討中</h3>
+          </div>
+        </div>
+        <p class="text-sm text-gray-600 mb-3">10年以上お使いの方、そろそろ交換時期かも。補助金活用で最大12万円お得に。</p>
+        <span class="text-sky-600 text-sm font-bold group-hover:underline">ご依頼の流れを見る <i class="fas fa-arrow-right ml-1"></i></span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ======= 選ばれる5つの理由 ======= -->
+<section class="py-10 md:py-14 px-4 bg-gradient-to-b from-gray-50 to-white section-fade">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-center text-2xl md:text-3xl font-black mb-2">
+      地域のエコキュート専門店が<br class="md:hidden"><span class="gradient-text">選ばれる5つの理由</span>
+    </h2>
+    <p class="text-center text-gray-500 text-sm mb-8">袋井市で22年、地域のお客様に寄り添い続けています</p>
+    
+    <div class="space-y-4">
+      <!-- 理由1: AI電話 -->
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 md:p-6 flex gap-4 items-start card-hover">
+        <div class="w-14 h-14 bg-gradient-to-br from-orange-400 to-red-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow">
+          <i class="fas fa-robot text-white text-xl"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2 mb-1">
+            <span class="text-orange-500 font-black text-sm">01</span>
+            <h3 class="text-lg font-bold">対話型AIが電話受付｜いつでもスムーズに対応</h3>
+          </div>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            お電話いただくと<strong>対話型AIが丁寧にヒアリング</strong>。「今すぐ話したいのに繋がらない…」というストレスを解消。
+            お客様の状況を正確にお聞きし、担当者へスムーズにお繋ぎします。平日の営業時間外でも受付可能です。
+          </p>
+          <span class="inline-flex items-center gap-1 mt-2 text-xs bg-orange-50 text-orange-600 px-2 py-1 rounded-full">
+            <i class="fas fa-star"></i>他社にない独自サービス
+          </span>
+        </div>
+      </div>
+
+      <!-- 理由2: 有資格者 -->
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 md:p-6 flex gap-4 items-start card-hover">
+        <div class="w-14 h-14 bg-gradient-to-br from-sky-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0 shadow">
+          <i class="fas fa-certificate text-white text-xl"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2 mb-1">
+            <span class="text-sky-600 font-black text-sm">02</span>
+            <h3 class="text-lg font-bold">有資格者多数在籍｜確かな技術力で安心</h3>
+          </div>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            給水装置主任技術者、一級電気工事施工管理士、管工事施工管理士をはじめ、<strong>15種類以上の専門資格</strong>を保有。
+            エコキュートの設置には電気・水道・ガスの複合的な知識が必要です。当社なら<strong>ワンストップで対応</strong>できます。
+          </p>
+          <a href="/company" class="inline-flex items-center gap-1 mt-2 text-xs text-sky-600 hover:text-sky-700 font-medium">
+            <i class="fas fa-list-check"></i>資格一覧を見る
+          </a>
+        </div>
+      </div>
+
+      <!-- 理由3: 地域密着 -->
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 md:p-6 flex gap-4 items-start card-hover">
+        <div class="w-14 h-14 bg-gradient-to-br from-green-400 to-emerald-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow">
+          <i class="fas fa-map-marker-alt text-white text-xl"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2 mb-1">
+            <span class="text-green-600 font-black text-sm">03</span>
+            <h3 class="text-lg font-bold">袋井市拠点の地域密着｜迅速に駆けつけます</h3>
+          </div>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            本社は袋井市山科。<strong>袋井市・磐田市・掛川市を中心に10市町</strong>をカバー。地域だからこそ対応が早い。
+            「顔が見える業者」として、施工後のアフターサポートも責任を持って対応します。
+          </p>
+          <a href="/area" class="inline-flex items-center gap-1 mt-2 text-xs text-green-600 hover:text-green-700 font-medium">
+            <i class="fas fa-map-marked-alt"></i>対応エリアを確認
+          </a>
+        </div>
+      </div>
+
+      <!-- 理由4: 格安 -->
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 md:p-6 flex gap-4 items-start card-hover">
+        <div class="w-14 h-14 bg-gradient-to-br from-yellow-400 to-amber-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow">
+          <i class="fas fa-yen-sign text-white text-xl"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2 mb-1">
+            <span class="text-amber-600 font-black text-sm">04</span>
+            <h3 class="text-lg font-bold">機器の格安販売＋補助金対応｜家計にやさしい</h3>
+          </div>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            エコキュート専門だからこそ実現できる<strong>格安価格</strong>。さらに<strong>給湯省エネ2026事業（国の補助金）に対応</strong>。
+            最大12万円の補助を受けられる可能性があります。お見積りは0円。強引な営業は一切いたしません。
+          </p>
+          <a href="/subsidy" class="inline-flex items-center gap-1 mt-2 text-xs text-amber-600 hover:text-amber-700 font-medium">
+            <i class="fas fa-calculator"></i>補助金の詳細を見る
+          </a>
+        </div>
+      </div>
+
+      <!-- 理由5: 安心保証 -->
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 md:p-6 flex gap-4 items-start card-hover">
+        <div class="w-14 h-14 bg-gradient-to-br from-purple-400 to-indigo-500 rounded-xl flex items-center justify-center flex-shrink-0 shadow">
+          <i class="fas fa-shield-alt text-white text-xl"></i>
+        </div>
+        <div>
+          <div class="flex items-center gap-2 mb-1">
+            <span class="text-purple-600 font-black text-sm">05</span>
+            <h3 class="text-lg font-bold">各種許認可＋保険完備｜万が一も安心</h3>
+          </div>
+          <p class="text-sm text-gray-600 leading-relaxed">
+            袋井市指定給水装置工事事業者、電気工事業届出、産業廃棄物収集運搬業など<strong>必要な許認可をすべて取得</strong>。
+            事業賠償保険・業務災害保険にも加入。万が一の際もしっかり補償いたします。
+          </p>
+          <a href="/company" class="inline-flex items-center gap-1 mt-2 text-xs text-purple-600 hover:text-purple-700 font-medium">
+            <i class="fas fa-file-alt"></i>許認可一覧を見る
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= 取扱メーカー ======= -->
+<section class="py-10 px-4 bg-white section-fade">
+  <div class="max-w-5xl mx-auto text-center">
+    <h2 class="text-2xl md:text-3xl font-black mb-6">取扱い<span class="gradient-text">メーカー</span></h2>
+    <div class="flex flex-wrap justify-center gap-4 md:gap-6">
+      <div class="bg-gray-50 rounded-xl px-6 py-4 border border-gray-200 flex items-center gap-2 card-hover">
+        <i class="fas fa-industry text-red-500"></i>
+        <span class="font-bold text-gray-700">三菱電機</span>
+      </div>
+      <div class="bg-gray-50 rounded-xl px-6 py-4 border border-gray-200 flex items-center gap-2 card-hover">
+        <i class="fas fa-industry text-red-600"></i>
+        <span class="font-bold text-gray-700">HITACHI</span>
+      </div>
+      <div class="bg-gray-50 rounded-xl px-6 py-4 border border-gray-200 flex items-center gap-2 card-hover">
+        <i class="fas fa-industry text-red-700"></i>
+        <span class="font-bold text-gray-700">TOSHIBA</span>
+      </div>
+      <div class="bg-gray-50 rounded-xl px-6 py-4 border border-gray-200 flex items-center gap-2 card-hover">
+        <i class="fas fa-industry text-blue-600"></i>
+        <span class="font-bold text-gray-700">DAIKIN</span>
+      </div>
+      <div class="bg-gray-50 rounded-xl px-6 py-4 border border-gray-200 flex items-center gap-2 card-hover">
+        <i class="fas fa-industry text-blue-700"></i>
+        <span class="font-bold text-gray-700">CORONA</span>
+      </div>
+    </div>
+    <p class="text-sm text-gray-500 mt-4">上記以外のメーカーもお問い合わせください。メニューにないものにも対応可能です。</p>
+  </div>
+</section>
+
+<!-- ======= 施工事例 ======= -->
+<section class="py-10 md:py-14 px-4 bg-gradient-to-b from-gray-50 to-white section-fade">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-center text-2xl md:text-3xl font-black mb-2">
+      <span class="gradient-text">施工事例</span>
+    </h2>
+    <p class="text-center text-gray-500 text-sm mb-8">実際のエコキュート交換工事の様子をご紹介します</p>
+    
+    <div class="grid md:grid-cols-3 gap-5">
+      <!-- 事例1: 標準的な交換工事 -->
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden card-hover">
+        <div class="aspect-[4/3] overflow-hidden bg-gray-100">
+          <img src="https://sspark.genspark.ai/cfimages?u1=6nPRZRTCDiHc2bCZmIWyAHE0pwtg8EjaYGlyQLIwOUGAaKjJabl6SKD2ImpCD9oqTOHVO6%2FTt1HqoI7Naq1gHzJuvp0tSth8Rxa%2BPKt%2FddINtKPDuw%3D%3D&u2=zs2kyQbA8e7E7e7M&width=2560" alt="エコキュート設置工事の様子" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+        </div>
+        <div class="p-4">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="bg-orange-100 text-orange-700 text-[10px] font-bold px-2 py-0.5 rounded-full">交換工事</span>
+            <span class="bg-gray-100 text-gray-600 text-[10px] px-2 py-0.5 rounded-full">三菱電機</span>
+          </div>
+          <h3 class="font-bold text-sm mb-1">エコキュート新規設置工事</h3>
+          <p class="text-xs text-gray-500">基礎工事から配管接続まで、有資格者が丁寧に施工。新品のエコキュートが設置され、快適な給湯環境が整いました。</p>
+        </div>
+      </div>
+
+      <!-- 事例2: ビフォーアフター -->
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden card-hover">
+        <div class="aspect-[4/3] overflow-hidden bg-gray-100">
+          <img src="https://sspark.genspark.ai/cfimages?u1=YrbS8l9Ec%2FvDvf7WKio5EgoBbq2T6ndLVnAmN8lWY%2FJoBJ8dGqrEl8HjvGlmsByaZtWSY4TzuM5xWx5FJMJ7JeUEiqBZ04uMjnQl%2FCXoKkyS74BQrz41j%2BE9xiFcosNVJhpAZiNjtDq8&u2=1utFkI0C9m79l93W&width=2560" alt="エコキュート入替工事の完成写真" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+        </div>
+        <div class="p-4">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="bg-sky-100 text-sky-700 text-[10px] font-bold px-2 py-0.5 rounded-full">入替工事</span>
+            <span class="bg-gray-100 text-gray-600 text-[10px] px-2 py-0.5 rounded-full">DAIKIN</span>
+          </div>
+          <h3 class="font-bold text-sm mb-1">老朽化したエコキュートの入替工事</h3>
+          <p class="text-xs text-gray-500">15年使用の旧型から最新省エネモデルへ交換。配管も新規に引き直し、長期安心の仕上がりです。</p>
+        </div>
+      </div>
+
+      <!-- 事例3: 施工中の様子 -->
+      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden card-hover">
+        <div class="aspect-[4/3] overflow-hidden bg-gray-100">
+          <img src="https://sspark.genspark.ai/cfimages?u1=SOTiW%2B57LW6pa%2Bq%2BUbrBi%2F0QhD0RWRm%2FLsDo9sBVkK1IVNEb45qf6hykMkuXiTbxEOk13uEw7ovuFFgNVZyoL8DrIU4P0%2BsMHI6%2FO2dRw9LJbrHJyQ%3D%3D&u2=ZkfbZ3dn8RvQRJ7X&width=2560" alt="エコキュート工事の流れ" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+        </div>
+        <div class="p-4">
+          <div class="flex items-center gap-2 mb-2">
+            <span class="bg-green-100 text-green-700 text-[10px] font-bold px-2 py-0.5 rounded-full">設置工事</span>
+            <span class="bg-gray-100 text-gray-600 text-[10px] px-2 py-0.5 rounded-full">CORONA</span>
+          </div>
+          <h3 class="font-bold text-sm mb-1">戸建住宅へのエコキュート設置</h3>
+          <p class="text-xs text-gray-500">専門スタッフによる丁寧な基礎工事と配管施工。お客様立会いのもと、使い方のご説明まで実施しました。</p>
+        </div>
+      </div>
+    </div>
+
+    <p class="text-center text-xs text-gray-400 mt-4">※写真はイメージです。実際の施工は現場状況により異なります。</p>
+  </div>
+</section>
+
+<!-- ======= ご依頼の流れ（簡略版） ======= -->
+<section class="py-10 md:py-14 px-4 bg-gradient-to-b from-sky-50 to-white section-fade">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-center text-2xl md:text-3xl font-black mb-8">
+      <span class="gradient-text">ご依頼の流れ</span>
+    </h2>
+    
+    <div class="relative">
+      <!-- 縦ライン（モバイル） -->
+      <div class="absolute left-6 top-0 bottom-0 w-0.5 bg-orange-200 md:hidden"></div>
+      
+      <div class="grid md:grid-cols-3 gap-4 md:gap-6">
+        <div class="flex md:flex-col items-start md:items-center gap-4 md:gap-2 relative pl-14 md:pl-0">
+          <div class="absolute left-3 md:relative md:left-auto w-7 h-7 bg-orange-500 text-white rounded-full flex items-center justify-center text-sm font-bold shadow z-10">1</div>
+          <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-4 flex-1 md:text-center w-full">
+            <h3 class="font-bold mb-1"><i class="fas fa-phone-alt text-orange-400 mr-1"></i>お問い合わせ</h3>
+            <p class="text-xs text-gray-500">電話・メール・FAXいずれかでご連絡。対話型AIが24h受付。</p>
+          </div>
+        </div>
+        <div class="flex md:flex-col items-start md:items-center gap-4 md:gap-2 relative pl-14 md:pl-0">
+          <div class="absolute left-3 md:relative md:left-auto w-7 h-7 bg-orange-500 text-white rounded-full flex items-center justify-center text-sm font-bold shadow z-10">2</div>
+          <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-4 flex-1 md:text-center w-full">
+            <h3 class="font-bold mb-1"><i class="fas fa-clipboard-check text-sky-500 mr-1"></i>現地調査・お見積り</h3>
+            <p class="text-xs text-gray-500">出張費2,000円〜。お見積り0円。無理な営業は一切なし。</p>
+          </div>
+        </div>
+        <div class="flex md:flex-col items-start md:items-center gap-4 md:gap-2 relative pl-14 md:pl-0">
+          <div class="absolute left-3 md:relative md:left-auto w-7 h-7 bg-orange-500 text-white rounded-full flex items-center justify-center text-sm font-bold shadow z-10">3</div>
+          <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-4 flex-1 md:text-center w-full">
+            <h3 class="font-bold mb-1"><i class="fas fa-tools text-green-500 mr-1"></i>施工・お支払い</h3>
+            <p class="text-xs text-gray-500">ご納得いただいてから施工。現金・クレカ・振込対応。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="text-center mt-6">
+      <a href="/flow" class="inline-flex items-center gap-2 text-orange-600 hover:text-orange-700 font-bold text-sm">
+        詳しい流れを見る<i class="fas fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ======= 対応エリア ======= -->
+<section class="py-10 px-4 bg-white section-fade">
+  <div class="max-w-5xl mx-auto">
+    <h2 class="text-center text-2xl md:text-3xl font-black mb-2">
+      <span class="gradient-text">対応エリア</span>
+    </h2>
+    <p class="text-center text-gray-500 text-sm mb-6">袋井市を拠点に、西部〜中部エリアを広くカバー</p>
+    
+    <div class="md:flex md:gap-8 md:items-start">
+      <div class="md:flex-1 mb-6 md:mb-0">
+        <div class="flex flex-wrap gap-2 justify-center md:justify-start">
+          <span class="bg-orange-100 text-orange-700 font-bold px-4 py-2 rounded-lg text-sm border border-orange-200">
+            <i class="fas fa-map-pin mr-1"></i>袋井市（拠点）
+          </span>
+          <span class="bg-gray-100 text-gray-700 px-3 py-2 rounded-lg text-sm">磐田市</span>
+          <span class="bg-gray-100 text-gray-700 px-3 py-2 rounded-lg text-sm">掛川市</span>
+          <span class="bg-gray-100 text-gray-700 px-3 py-2 rounded-lg text-sm">森町</span>
+          <span class="bg-gray-100 text-gray-700 px-3 py-2 rounded-lg text-sm">浜松市</span>
+          <span class="bg-gray-100 text-gray-700 px-3 py-2 rounded-lg text-sm">菊川市</span>
+          <span class="bg-gray-100 text-gray-700 px-3 py-2 rounded-lg text-sm">御前崎市</span>
+          <span class="bg-gray-100 text-gray-700 px-3 py-2 rounded-lg text-sm">牧之原市</span>
+          <span class="bg-gray-100 text-gray-700 px-3 py-2 rounded-lg text-sm">島田市</span>
+          <span class="bg-gray-100 text-gray-700 px-3 py-2 rounded-lg text-sm">吉田町</span>
+        </div>
+        <p class="text-xs text-gray-400 mt-3 text-center md:text-left">※上記以外のエリアもご相談ください</p>
+      </div>
+      <div class="md:flex-1">
+        <div class="rounded-xl overflow-hidden shadow-sm border border-gray-200">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52198.76!2d137.9!3d34.75!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x601b10cd2a4ed02d%3A0x5c4aee11ced7d2a4!2z6KKL5LqV5biC!5e0!3m2!1sja!2sjp!4v1" 
+            width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="対応エリアマップ - 袋井市">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= お電話前のご準備 ======= -->
+<section class="py-10 px-4 bg-gradient-to-b from-amber-50 to-white section-fade">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-center text-2xl font-black mb-6">
+      <i class="fas fa-lightbulb text-amber-400 mr-2"></i>お電話前のご準備
+    </h2>
+    <div class="bg-white rounded-2xl shadow-sm border border-amber-200 p-6">
+      <p class="text-sm text-gray-600 mb-4">以下の情報をご準備いただくと、スムーズにご案内できます（無くても大丈夫です！）</p>
+      <ol class="space-y-3">
+        <li class="flex items-start gap-3">
+          <span class="w-7 h-7 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">1</span>
+          <div>
+            <div class="font-bold text-sm">メーカー名・型式・製造年</div>
+            <p class="text-xs text-gray-500">本体の銘板シールまたは取扱説明書に記載されています</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="w-7 h-7 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">2</span>
+          <div>
+            <div class="font-bold text-sm">故障内容・エラーコード</div>
+            <p class="text-xs text-gray-500">リモコン画面に表示される英数字（例：H1、E16など）</p>
+          </div>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="w-7 h-7 bg-amber-100 text-amber-600 rounded-full flex items-center justify-center text-sm font-bold flex-shrink-0">3</span>
+          <div>
+            <div class="font-bold text-sm">写真や動画</div>
+            <p class="text-xs text-gray-500">現場の状況がわかると、より正確なお見積りが可能です</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ======= よくある質問 ======= -->
+<section class="py-10 px-4 bg-white section-fade">
+  <div class="max-w-3xl mx-auto">
+    <h2 class="text-center text-2xl md:text-3xl font-black mb-8">
+      <span class="gradient-text">よくあるご質問</span>
+    </h2>
+    <div class="space-y-3" id="faq-list">
+      <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden">
+        <button onclick="this.parentElement.classList.toggle('open')" class="w-full flex items-center justify-between p-4 text-left hover:bg-gray-100 transition-colors">
+          <span class="font-bold text-sm pr-4"><i class="fas fa-question-circle text-orange-400 mr-2"></i>見積りだけでも大丈夫ですか？</span>
+          <i class="fas fa-chevron-down text-gray-400 text-xs transition-transform"></i>
+        </button>
+        <div class="faq-answer px-4 pb-4 hidden">
+          <p class="text-sm text-gray-600">はい、もちろんです。<strong>お見積りは0円</strong>です。見積りだけのお問い合わせも大歓迎です。強引な営業は一切いたしませんのでご安心ください。</p>
+        </div>
+      </div>
+      <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden">
+        <button onclick="this.parentElement.classList.toggle('open')" class="w-full flex items-center justify-between p-4 text-left hover:bg-gray-100 transition-colors">
+          <span class="font-bold text-sm pr-4"><i class="fas fa-question-circle text-orange-400 mr-2"></i>AIが電話に出るのですか？人間と話せますか？</span>
+          <i class="fas fa-chevron-down text-gray-400 text-xs transition-transform"></i>
+        </button>
+        <div class="faq-answer px-4 pb-4 hidden">
+          <p class="text-sm text-gray-600">最初は対話型AIがお客様の状況を丁寧にお聞きし、内容を正確に記録します。その後、担当者から折り返しご連絡いたします。「AIだと不安…」という方もご安心ください。人間のスタッフが必ず対応いたします。</p>
+        </div>
+      </div>
+      <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden">
+        <button onclick="this.parentElement.classList.toggle('open')" class="w-full flex items-center justify-between p-4 text-left hover:bg-gray-100 transition-colors">
+          <span class="font-bold text-sm pr-4"><i class="fas fa-question-circle text-orange-400 mr-2"></i>エコキュートの交換費用の目安は？</span>
+          <i class="fas fa-chevron-down text-gray-400 text-xs transition-transform"></i>
+        </button>
+        <div class="faq-answer px-4 pb-4 hidden">
+          <p class="text-sm text-gray-600">設置環境やメーカー・機種により異なりますが、当店ではメーカー直接仕入れによる<strong>格安価格</strong>でご提供しています。また<strong>給湯省エネ2026事業</strong>の補助金（最大12万円）もご活用いただけます。まずはお気軽にお問い合わせください。</p>
+        </div>
+      </div>
+      <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden">
+        <button onclick="this.parentElement.classList.toggle('open')" class="w-full flex items-center justify-between p-4 text-left hover:bg-gray-100 transition-colors">
+          <span class="font-bold text-sm pr-4"><i class="fas fa-question-circle text-orange-400 mr-2"></i>支払い方法は何がありますか？</span>
+          <i class="fas fa-chevron-down text-gray-400 text-xs transition-transform"></i>
+        </button>
+        <div class="faq-answer px-4 pb-4 hidden">
+          <p class="text-sm text-gray-600">現金一括、各種クレジットカード、銀行振込に対応しています。</p>
+        </div>
+      </div>
+      <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden">
+        <button onclick="this.parentElement.classList.toggle('open')" class="w-full flex items-center justify-between p-4 text-left hover:bg-gray-100 transition-colors">
+          <span class="font-bold text-sm pr-4"><i class="fas fa-question-circle text-orange-400 mr-2"></i>出張費はかかりますか？</span>
+          <i class="fas fa-chevron-down text-gray-400 text-xs transition-transform"></i>
+        </button>
+        <div class="faq-answer px-4 pb-4 hidden">
+          <p class="text-sm text-gray-600">出張費は2,000円〜となります。エリアや状況により異なりますので、お電話の際にご確認ください。</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======= 最終CTA ======= -->
+<section class="py-12 px-4 bg-gradient-to-br from-sky-700 to-sky-900 text-white section-fade">
+  <div class="max-w-3xl mx-auto text-center">
+    <h2 class="text-2xl md:text-3xl font-black mb-3">
+      エコキュートのことなら<br>何でもお気軽にご相談ください
+    </h2>
+    <p class="text-sky-200 text-sm mb-6">お見積り0円・強引な営業なし・対話型AIがスムーズに受付</p>
+    <div class="flex flex-col sm:flex-row justify-center gap-3">
+      <a href="tel:05017201813" class="flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white font-bold px-8 py-4 rounded-xl text-lg shadow-xl transition-all active:scale-95">
+        <i class="fas fa-phone-alt"></i>
+        <div class="leading-tight">
+          <div class="text-[10px] font-normal text-orange-100">対話型AIが受付</div>
+          <div>050-1720-1813</div>
+        </div>
+      </a>
+      <a href="mailto:kaden@estech.info" class="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur border border-white/30 text-white font-bold px-8 py-4 rounded-xl transition-all active:scale-95">
+        <i class="fas fa-envelope"></i>
+        <span>メールで問い合わせ</span>
+      </a>
+    </div>
+    <div class="mt-4 flex justify-center gap-4 text-xs text-sky-300">
+      <span><i class="fas fa-fax mr-1"></i>FAX: 050-1808-3052</span>
+      <span><i class="fas fa-clock mr-1"></i>営業: 8:30〜17:30</span>
+    </div>
+  </div>
+</section>
+
+<script>
+// FAQ アコーディオン
+document.querySelectorAll('#faq-list .bg-gray-50').forEach(item => {
+  const btn = item.querySelector('button');
+  const answer = item.querySelector('.faq-answer');
+  const icon = btn.querySelector('.fa-chevron-down');
+  btn.addEventListener('click', () => {
+    const isOpen = !answer.classList.contains('hidden');
+    // Close all
+    document.querySelectorAll('#faq-list .faq-answer').forEach(a => a.classList.add('hidden'));
+    document.querySelectorAll('#faq-list .fa-chevron-down').forEach(i => i.style.transform = '');
+    // Toggle current
+    if (!isOpen) {
+      answer.classList.remove('hidden');
+      icon.style.transform = 'rotate(180deg)';
+    }
+  });
+});
+</script>
+`
+
+  return c.html(layout({
+    title: '袋井市のエコキュート専門店｜交換・修理・新規導入なら地域のエコキュート専門店（イーエス・テック）',
+    description: '静岡県袋井市のエコキュート交換・修理・新規導入専門店。対話型AIが24時間電話受付。有資格者多数在籍。お見積り0円。給湯省エネ2026事業（補助金最大12万円）対応。袋井市・磐田市・掛川市・浜松市対応。',
+    canonical: 'https://estech-ecocute.pages.dev/',
+    ogType: 'website'
+  }, content))
+}
