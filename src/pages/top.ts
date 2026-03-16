@@ -322,7 +322,7 @@ export const topPage = (c: Context) => {
       <!-- 事例1: 標準的な交換工事 -->
       <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden card-hover">
         <div class="aspect-[4/3] overflow-hidden bg-gray-100">
-          <img src="https://sspark.genspark.ai/cfimages?u1=Qes8Xj1Ncocq8FOGcIz7HoeS3edpI%2BpSwZahbZgR2NJbeQUiMBy1LrOjhi53Kjw5eJn3a1I0cW3L0zj5gqgvHE8zmZYK%2B3QYP%2BJqNXwrd%2BDZp88lXqs%2FyvzEf5Y9&u2=%2BkP3WpbfTApj12dI&width=2560" alt="三菱電機エコキュート設置完了後の様子" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+          <img src="https://www.genspark.ai/api/files/s/HowDWp5b" alt="三菱電機エコキュート設置完了後の様子" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
         </div>
         <div class="p-4">
           <div class="flex items-center gap-2 mb-2">
@@ -337,7 +337,7 @@ export const topPage = (c: Context) => {
       <!-- 事例2: ビフォーアフター -->
       <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden card-hover">
         <div class="aspect-[4/3] overflow-hidden bg-gray-100">
-          <img src="https://sspark.genspark.ai/cfimages?u1=YrbS8l9Ec%2FvDvf7WKio5EgoBbq2T6ndLVnAmN8lWY%2FJoBJ8dGqrEl8HjvGlmsByaZtWSY4TzuM5xWx5FJMJ7JeUEiqBZ04uMjnQl%2FCXoKkyS74BQrz41j%2BE9xiFcosNVJhpAZiNjtDq8&u2=1utFkI0C9m79l93W&width=2560" alt="エコキュート入替工事の完成写真" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+          <img src="https://www.genspark.ai/api/files/s/Rva59LjX" alt="エコキュート入替工事の完成写真" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
         </div>
         <div class="p-4">
           <div class="flex items-center gap-2 mb-2">
@@ -352,7 +352,7 @@ export const topPage = (c: Context) => {
       <!-- 事例3: 施工中の様子 -->
       <div class="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden card-hover">
         <div class="aspect-[4/3] overflow-hidden bg-gray-100">
-          <img src="https://sspark.genspark.ai/cfimages?u1=SOTiW%2B57LW6pa%2Bq%2BUbrBi%2F0QhD0RWRm%2FLsDo9sBVkK1IVNEb45qf6hykMkuXiTbxEOk13uEw7ovuFFgNVZyoL8DrIU4P0%2BsMHI6%2FO2dRw9LJbrHJyQ%3D%3D&u2=ZkfbZ3dn8RvQRJ7X&width=2560" alt="エコキュート工事の流れ" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
+          <img src="https://www.genspark.ai/api/files/s/adXTHKlR" alt="エコキュート工事の流れ" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy">
         </div>
         <div class="p-4">
           <div class="flex items-center gap-2 mb-2">
