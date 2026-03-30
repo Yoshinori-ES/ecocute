@@ -8,6 +8,7 @@ import { areaPage } from './pages/area'
 import { subsidyPage } from './pages/subsidy'
 import { createCityPageHandler, createCityIndexHandler, allCityRoutes, allCitySlugs } from './pages/area-city'
 import { createTroublePageHandler, guideIndexHandler, allTroubleSlugs } from './pages/guide'
+import { warrantyPage } from './pages/warranty'
 
 const app = new Hono()
 
@@ -19,6 +20,7 @@ app.get('/company', companyPage)
 app.get('/flow', flowPage)
 app.get('/area', areaPage)
 app.get('/subsidy', subsidyPage)
+app.get('/warranty', warrantyPage)
 
 // ===== 都市別エリアページ（ロングテールSEO） =====
 // /area/:city → 都市インデックス（3カテゴリへの導線）
@@ -56,7 +58,8 @@ app.get('/sitemap.xml', (c) => {
     { url: '/flow', priority: '0.7', changefreq: 'monthly' },
     { url: '/area', priority: '0.7', changefreq: 'monthly' },
     { url: '/company', priority: '0.6', changefreq: 'monthly' },
-    { url: '/guide', priority: '0.7', changefreq: 'weekly' }
+    { url: '/guide', priority: '0.7', changefreq: 'weekly' },
+    { url: '/warranty', priority: '0.5', changefreq: 'yearly' }
   ]
 
   // ガイドページ
