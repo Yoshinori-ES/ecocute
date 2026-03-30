@@ -20,9 +20,6 @@ export const topPage = (c: Context) => {
           <span class="inline-flex items-center gap-1 bg-white/15 backdrop-blur px-3 py-1 rounded-full text-xs font-medium">
             <i class="fas fa-shield-alt text-green-300"></i>袋井市指定給水装置工事事業者
           </span>
-          <span class="inline-flex items-center gap-1 bg-white/15 backdrop-blur px-3 py-1 rounded-full text-xs font-medium">
-            <i class="fas fa-robot text-orange-300"></i>お電話で即対応
-          </span>
         </div>
         
         <!-- メインキャッチコピー -->
@@ -136,8 +133,8 @@ export const topPage = (c: Context) => {
   </div>
 </section>
 
-<!-- ======= 選ばれる5つの理由 ======= -->
-<section class="py-10 md:py-14 px-4 bg-gradient-to-b from-gray-50 to-white section-fade">
+<!-- ======= 選ばれる5つの理由 =======-->
+<section class="py-10 md:py-14 px-4 bg-gradient-to-b from-gray-50 to-white section-fade visible">
   <div class="max-w-5xl mx-auto">
     <h2 class="text-center text-2xl md:text-3xl font-black mb-2">
       地域のエコキュート専門店が<br class="md:hidden"><span class="gradient-text">選ばれる5つの理由</span>
