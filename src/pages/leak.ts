@@ -25,7 +25,7 @@ export const leakPage = (c: Context) => {
     </div>
     <p class="text-red-100 text-sm md:text-base max-w-2xl">
       まずは落ち着いてください。以下の手順で応急処置を行い、被害の拡大を防ぎましょう。
-      <strong class="text-white">お電話いただければ、対話型AIがすぐに受付いたします。</strong>
+      <strong class="text-white">お電話いただければ、時間外はAIが受付いたします。</strong>
     </p>
     <a href="tel:05017201813" class="inline-flex items-center gap-2 bg-white text-red-600 font-bold px-6 py-3 rounded-xl mt-4 shadow-lg hover:bg-red-50 transition-colors active:scale-95">
       <i class="fas fa-phone-alt"></i>
@@ -149,7 +149,7 @@ export const leakPage = (c: Context) => {
           <div>
             <h3 class="text-lg font-bold mb-2">当店にご連絡ください</h3>
             <p class="text-sm text-gray-600 leading-relaxed mb-3">
-              応急処置が終わったら、お気軽にご連絡ください。<strong>対話型AIが24時間受付</strong>いたします。
+              応急処置が終わったら、お気軽にご連絡ください。<strong>時間外はAI受付</strong>いたします。
               状況をお聞きし、担当者から折り返しご連絡いたします。
             </p>
             <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
@@ -298,11 +298,11 @@ export const leakPage = (c: Context) => {
       <i class="fas fa-headset mr-2"></i>
       まずはお気軽にお電話ください
     </h2>
-    <p class="text-red-100 text-sm mb-5">対話型AIが丁寧にお聞きします。強引な営業は一切ありません。</p>
+    <p class="text-red-100 text-sm mb-5">時間外はAIが丁寧にお聞きします。強引な営業は一切ありません。</p>
     <a href="tel:05017201813" class="inline-flex items-center gap-2 bg-white text-red-600 font-bold px-8 py-4 rounded-xl text-lg shadow-xl hover:bg-red-50 transition-colors active:scale-95">
       <i class="fas fa-phone-alt animate-pulse-slow"></i>
       <div class="leading-tight">
-        <div class="text-[10px] text-red-400">対話型AIがスムーズにご案内</div>
+        <div class="text-[10px] text-red-400">時間外はAIがスムーズにご案内</div>
         <div>050-1720-1813</div>
       </div>
     </a>
@@ -325,7 +325,7 @@ export const leakPage = (c: Context) => {
 
   return c.html(layout({
     title: '【緊急】エコキュートの漏水・故障対処法｜袋井市のエコキュート専門店',
-    description: 'エコキュートの水漏れ・故障でお困りですか？まずは止水栓を閉め、ブレーカーを落としましょう。袋井市の専門店が応急処置から修理まで丁寧にサポート。対話型AI電話受付で24時間対応。',
+    description: 'エコキュートの水漏れ・故障でお困りですか？まずは止水栓を閉め、ブレーカーを落としましょう。袋井市の専門店が応急処置から修理まで丁寧にサポート。時間外はAI電話受付で対応。',
     canonical: 'https://estech-ecocute.pages.dev/leak',
     structuredData
   }, content))

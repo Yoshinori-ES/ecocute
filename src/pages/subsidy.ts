@@ -171,7 +171,7 @@ export const subsidyPage = (c: Context) => {
     <a href="tel:05017201813" class="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold px-8 py-4 rounded-xl text-lg shadow-xl transition-all active:scale-95">
       <i class="fas fa-phone-alt"></i>050-1720-1813
     </a>
-    <p class="text-xs text-green-300 mt-3">対話型AIが受付 → 担当者がご案内します</p>
+    <p class="text-xs text-green-300 mt-3">時間外はAI受付 → 担当者がご案内します</p>
   </div>
 </section>
 `

@@ -182,7 +182,7 @@ export const warrantyPage = (c: Context) => {
 <section class="py-10 px-4 bg-gradient-to-br from-sky-700 to-sky-900 text-white">
   <div class="max-w-3xl mx-auto text-center">
     <h2 class="text-xl md:text-2xl font-black mb-3">保証に関するご質問もお気軽にどうぞ</h2>
-    <p class="text-sky-200 text-sm mb-5">対話型AIが24時間受付。施工後のご相談もお任せください。</p>
+    <p class="text-sky-200 text-sm mb-5">時間外はAI受付。施工後のご相談もお任せください。</p>
     <a href="tel:05017201813" class="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold px-8 py-4 rounded-xl text-lg shadow-xl transition-all active:scale-95">
       <i class="fas fa-phone-alt"></i>050-1720-1813
     </a>

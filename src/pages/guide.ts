@@ -23,7 +23,7 @@ const troublePages: TroublePage[] = [
     slug: 'kosho',
     keyword: 'エコキュート 故障',
     title: 'エコキュートの故障サイン・原因と対処法',
-    metaDesc: 'エコキュートの故障サイン・原因・対処法を分かりやすく解説。お湯が出ない、エラーコード表示、水漏れなどの症状別ガイド。袋井市の専門店が修理・交換を丁寧に対応。24時間AI電話受付。',
+    metaDesc: 'エコキュートの故障サイン・原因・対処法を分かりやすく解説。お湯が出ない、エラーコード表示、水漏れなどの症状別ガイド。袋井市の専門店が修理・交換を丁寧に対応。時間外はAI受付。',
     heroIcon: 'fa-exclamation-triangle',
     heroColor: 'from-red-600 to-red-800',
     content: `
@@ -117,7 +117,7 @@ const troublePages: TroublePage[] = [
     slug: 'shuri',
     keyword: 'エコキュート 修理',
     title: 'エコキュートの修理｜料金目安・流れ・対応メーカー',
-    metaDesc: 'エコキュートの修理なら袋井市の専門店イーエス・テック。修理料金の目安、対応の流れ、全メーカー対応。有資格者が丁寧に診断・修理。お見積り0円。24時間AI電話受付。',
+    metaDesc: 'エコキュートの修理なら袋井市の専門店イーエス・テック。修理料金の目安、対応の流れ、全メーカー対応。有資格者が丁寧に診断・修理。お見積り0円。時間外はAI受付。',
     heroIcon: 'fa-wrench',
     heroColor: 'from-blue-600 to-blue-800',
     content: `
@@ -156,7 +156,7 @@ const troublePages: TroublePage[] = [
       <div class="space-y-4">
         <div class="flex items-start gap-3">
           <span class="bg-sky-500 text-white text-xs font-bold w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0">1</span>
-          <div><h3 class="font-bold text-sm">お電話・メールでご連絡</h3><p class="text-xs text-gray-600">対話型AIが24時間受付。症状やエラーコードをお伝えください。</p></div>
+          <div><h3 class="font-bold text-sm">お電話・メールでご連絡</h3><p class="text-xs text-gray-600">時間外はAI受付。症状やエラーコードをお伝えください。</p></div>
         </div>
         <div class="flex items-start gap-3">
           <span class="bg-sky-500 text-white text-xs font-bold w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0">2</span>
@@ -411,7 +411,7 @@ const troublePages: TroublePage[] = [
           <div class="bg-purple-50 px-4 py-3"><h3 class="font-bold text-sm"><i class="fas fa-bolt text-purple-400 mr-1"></i>原因④：本体の故障</h3></div>
           <div class="p-4 text-sm text-gray-600">
             <p class="mb-2">上記をすべて確認してもお湯が出ない場合は本体の故障が考えられます。</p>
-            <ul class="space-y-1 ml-4 text-xs"><li>✅ <strong>プロの点検が必要</strong>です</li><li>✅ 対話型AIが24時間電話受付 → <a href="tel:05017201813" class="text-orange-500 underline font-bold">050-1720-1813</a></li><li>✅ 修理or交換、最適な提案をいたします</li></ul>
+            <ul class="space-y-1 ml-4 text-xs"><li>✅ <strong>プロの点検が必要</strong>です</li><li>✅ 時間外はAI受付 → <a href="tel:05017201813" class="text-orange-500 underline font-bold">050-1720-1813</a></li><li>✅ 修理or交換、最適な提案をいたします</li></ul>
           </div>
         </div>
       </div>
@@ -470,7 +470,7 @@ export function createTroublePageHandler(slug: string) {
 <section class="py-10 px-4 bg-gradient-to-br from-sky-800 to-sky-900 text-white">
   <div class="max-w-3xl mx-auto text-center">
     <h2 class="text-xl md:text-2xl font-black mb-3">エコキュートのお困りごと、お気軽にご相談ください</h2>
-    <p class="text-sky-200 text-sm mb-5">お見積り0円。対話型AIが24時間お電話を受け付けます。</p>
+    <p class="text-sky-200 text-sm mb-5">お見積り0円。時間外はAIがお電話を受け付けます。</p>
     <div class="flex flex-col sm:flex-row justify-center gap-3">
       <a href="tel:05017201813" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold px-8 py-4 rounded-xl text-lg shadow-xl transition-all active:scale-95">
         <i class="fas fa-phone-alt"></i>050-1720-1813
