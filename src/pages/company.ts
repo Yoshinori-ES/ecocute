@@ -28,7 +28,7 @@ export const companyPage = (c: Context) => {
             <tr><th class="px-4 py-3 text-left bg-gray-50 font-bold">所在地</th><td class="px-4 py-3">〒437-0066 静岡県袋井市山科3229番地の1</td></tr>
             <tr><th class="px-4 py-3 text-left bg-gray-50 font-bold">主営業品目</th><td class="px-4 py-3">エコキュート専門（交換・修理・新規導入）</td></tr>
             <tr><th class="px-4 py-3 text-left bg-gray-50 font-bold">営業時間</th><td class="px-4 py-3">8:30〜17:30（平日）</td></tr>
-            <tr><th class="px-4 py-3 text-left bg-gray-50 font-bold">TEL</th><td class="px-4 py-3"><a href="tel:05017201813" class="text-orange-600 font-bold hover:underline">050-1720-1813</a><span class="text-xs text-gray-500 ml-1">（時間外AI受付）</span></td></tr>
+            <tr><th class="px-4 py-3 text-left bg-gray-50 font-bold">TEL</th><td class="px-4 py-3"><a href="tel:05017201813" class="text-orange-600 font-bold hover:underline">050-1720-1813</a><span class="text-xs text-gray-500 ml-1">（時間外も受付対応）</span></td></tr>
             <tr><th class="px-4 py-3 text-left bg-gray-50 font-bold">FAX</th><td class="px-4 py-3">050-1808-3052</td></tr>
             <tr><th class="px-4 py-3 text-left bg-gray-50 font-bold">Mail</th><td class="px-4 py-3"><a href="mailto:kaden@estech.info" class="text-blue-600 hover:underline">kaden@estech.info</a></td></tr>
             <tr><th class="px-4 py-3 text-left bg-gray-50 font-bold">取扱メーカー</th><td class="px-4 py-3">Panasonic、三菱電機、HITACHI、TOSHIBA、DAIKIN、CORONA、ノーリツ</td></tr>

@@ -151,7 +151,7 @@ const serviceCategories: ServiceCategory[] = [
     keyword: 'エコキュート',
     pageTitle: 'エコキュート交換・修理',
     h1: 'エコキュート交換・修理・新規導入',
-    metaDesc: 'のエコキュート交換・修理・新規導入なら地域のエコキュート専門店（イーエス・テック）。有資格者多数在籍、お見積り0円。給湯省エネ2026事業で最大12万円補助金対応。時間外はAI受付。',
+    metaDesc: 'のエコキュート交換・修理・新規導入なら地域のエコキュート専門店（イーエス・テック）。有資格者多数在籍、お見積り0円。給湯省エネ2026事業で最大12万円補助金対応。時間外も受付対応。',
     relatedKeywords: ['エコキュート 交換', 'エコキュート 修理', 'エコキュート 取り付け', 'エコキュート 費用', 'エコキュート 補助金'],
     heroColor: 'from-sky-700 to-sky-900',
     heroIcon: 'fa-fire',
@@ -247,7 +247,7 @@ const serviceCategories: ServiceCategory[] = [
       <p class="text-sm text-gray-600 leading-relaxed mb-3">
         給湯器の突然の故障は生活に大きな影響を与えます。${city.name}からのご依頼にも
         ${city.isBase ? '最短当日で対応可能。' : `袋井市から${city.driveTime}で駆けつけます。`}
-        <strong>時間外はAI受付</strong>しておりますので、夜間のトラブルでもまずはお電話ください。
+        <strong>時間外も受付対応</strong>しておりますので、夜間のトラブルでもまずはお電話ください。
       </p>
       <ul class="space-y-1.5 text-sm text-gray-600">
         <li class="flex items-start gap-2"><i class="fas fa-check-circle text-green-500 mt-0.5"></i>お湯が出ない・ぬるいトラブル</li>
@@ -440,8 +440,8 @@ function generateCityPage(city: CityData, category: ServiceCategory): string {
       <div class="grid md:grid-cols-3 gap-4">
         <div class="bg-white rounded-xl p-4 text-center shadow-sm">
           <div class="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-3"><i class="fas fa-robot text-orange-500 text-xl"></i></div>
-          <h3 class="font-bold text-sm mb-1">時間外はAI電話受付</h3>
-          <p class="text-xs text-gray-500">深夜・早朝のトラブルでも時間外はAIが電話受付。翌営業日に人間のスタッフが折り返しご連絡します。</p>
+          <h3 class="font-bold text-sm mb-1">時間外も電話受付</h3>
+          <p class="text-xs text-gray-500">深夜・早朝のトラブルでも時間外は電話受付。翌営業日に人間のスタッフが折り返しご連絡します。</p>
         </div>
         <div class="bg-white rounded-xl p-4 text-center shadow-sm">
           <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3"><i class="fas fa-certificate text-blue-500 text-xl"></i></div>
@@ -481,7 +481,7 @@ function generateCityPage(city: CityData, category: ServiceCategory): string {
 <section class="py-10 px-4 bg-gradient-to-br from-sky-800 to-sky-900 text-white">
   <div class="max-w-3xl mx-auto text-center">
     <h2 class="text-xl md:text-2xl font-black mb-3">${city.name}のエコキュート・給湯器のことなら</h2>
-    <p class="text-sky-200 text-sm mb-5">お見積り0円。時間外はAIがお電話を受け付けます。</p>
+    <p class="text-sky-200 text-sm mb-5">お見積り0円。時間外もお電話を受け付けます。</p>
     <div class="flex flex-col sm:flex-row justify-center gap-3">
       <a href="tel:05017201813" class="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold px-8 py-4 rounded-xl text-lg shadow-xl transition-all active:scale-95">
         <i class="fas fa-phone-alt"></i>050-1720-1813
@@ -613,7 +613,7 @@ export function createCityIndexHandler(citySlug: string) {
 <section class="py-10 px-4 bg-gradient-to-br from-sky-800 to-sky-900 text-white">
   <div class="max-w-3xl mx-auto text-center">
     <h2 class="text-xl md:text-2xl font-black mb-3">${city.name}のエコキュート・給湯器のお悩みを解決</h2>
-    <p class="text-sky-200 text-sm mb-5">お見積り0円。時間外はAIが受付中。</p>
+    <p class="text-sky-200 text-sm mb-5">お見積り0円。時間外も受付中。</p>
     <a href="tel:05017201813" class="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold px-8 py-4 rounded-xl text-lg shadow-xl transition-all active:scale-95">
       <i class="fas fa-phone-alt"></i>050-1720-1813
     </a>

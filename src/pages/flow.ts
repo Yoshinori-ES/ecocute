@@ -25,7 +25,7 @@ export const flowPage = (c: Context) => {
           <div class="w-12 h-12 bg-gradient-to-br from-orange-400 to-orange-600 text-white rounded-full flex items-center justify-center text-sm font-black flex-shrink-0 shadow-lg z-10 border-4 border-white">1</div>
           <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 flex-1">
             <h3 class="font-bold text-lg mb-1"><i class="fas fa-phone-alt text-orange-400 mr-2"></i>お問い合わせ</h3>
-            <p class="text-sm text-gray-600 leading-relaxed">お電話・メール・FAXのいずれかでお気軽にお問い合わせください。<strong>時間外はAI受付</strong>いたします。</p>
+            <p class="text-sm text-gray-600 leading-relaxed">お電話・メール・FAXのいずれかでお気軽にお問い合わせください。<strong>時間外も受付対応</strong>いたします。</p>
             <div class="flex flex-wrap gap-2 mt-3">
               <a href="tel:05017201813" class="inline-flex items-center gap-1 bg-orange-100 text-orange-700 px-3 py-1.5 rounded-lg text-xs font-bold hover:bg-orange-200 transition-colors">
                 <i class="fas fa-phone-alt"></i>050-1720-1813
@@ -126,7 +126,7 @@ export const flowPage = (c: Context) => {
 <section class="py-10 px-4 bg-gradient-to-br from-sky-700 to-sky-900 text-white">
   <div class="max-w-3xl mx-auto text-center">
     <h2 class="text-xl md:text-2xl font-black mb-3">まずはお気軽にお問い合わせください</h2>
-    <p class="text-sky-200 text-sm mb-5">お見積り0円・強引な営業なし・時間外はAIがスムーズに受付</p>
+    <p class="text-sky-200 text-sm mb-5">お見積り0円・強引な営業なし・時間外もスムーズに受付</p>
     <a href="tel:05017201813" class="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold px-8 py-4 rounded-xl text-lg shadow-xl transition-all active:scale-95">
       <i class="fas fa-phone-alt"></i>050-1720-1813
     </a>
@@ -136,7 +136,7 @@ export const flowPage = (c: Context) => {
 
   return c.html(layout({
     title: 'ご依頼の流れ｜お問い合わせから施工完了まで｜袋井市のエコキュート専門店',
-    description: 'エコキュートの交換・修理のご依頼方法を9ステップで解説。お見積り0円・強引な営業なし。時間外はAI受付。袋井市の専門店が丁寧に対応します。',
+    description: 'エコキュートの交換・修理のご依頼方法を9ステップで解説。お見積り0円・強引な営業なし。時間外も受付対応。袋井市の専門店が丁寧に対応します。',
     canonical: 'https://estech-ecocute.pages.dev/flow'
   }, content))
 }
