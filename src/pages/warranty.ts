@@ -10,46 +10,77 @@ export const warrantyPage = (c: Context) => {
 <section class="bg-gradient-to-r from-sky-700 to-sky-800 text-white py-8 px-4">
   <div class="max-w-5xl mx-auto">
     <h1 class="text-2xl md:text-3xl font-black mb-2"><i class="fas fa-shield-alt mr-2"></i>保証規定</h1>
-    <p class="text-sky-100 text-sm">弊社が施工いたしました工事に関する品質保証についてご案内いたします。</p>
+    <p class="text-sky-100 text-sm">弊社が施工いたしました工事に関する保証内容についてご案内いたします。</p>
   </div>
 </section>
 
 <section class="py-10 px-4">
   <div class="max-w-3xl mx-auto">
 
-    <!-- 保証の概要 -->
+    <!-- 保証の概要 - 2つの保証 -->
     <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-6 mb-8">
-      <div class="flex items-center gap-3 mb-4">
+      <div class="flex items-center gap-3 mb-5">
         <div class="w-12 h-12 bg-gradient-to-br from-green-400 to-green-600 text-white rounded-full flex items-center justify-center text-lg flex-shrink-0 shadow-lg">
           <i class="fas fa-certificate"></i>
         </div>
-        <h2 class="text-xl font-black text-gray-800">施工保証について</h2>
+        <h2 class="text-xl font-black text-gray-800">2つの安心保証</h2>
       </div>
-      <div class="bg-green-50 border-2 border-green-200 rounded-xl p-5">
-        <p class="text-gray-700 leading-relaxed text-sm">
-          弊社が施工いたしました工事に関しまして、保証規定に基づき、<strong class="text-green-700">工事完了日から1年間</strong>の品質を保証いたします。万が一施工不良による不具合が発生した場合は、<strong class="text-green-700">無償にて修理・対応</strong>させていただきます。
-        </p>
+      <div class="grid sm:grid-cols-2 gap-4">
+        <!-- 機器保証 -->
+        <div class="bg-blue-50 border-2 border-blue-200 rounded-xl p-5 text-center">
+          <div class="w-14 h-14 bg-gradient-to-br from-blue-400 to-blue-600 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-3 shadow-lg">
+            <i class="fas fa-cog"></i>
+          </div>
+          <h3 class="font-black text-lg text-blue-800 mb-1">機器保証</h3>
+          <div class="text-3xl font-black text-blue-600 mb-2">1<span class="text-lg">年間</span></div>
+          <p class="text-xs text-gray-600 leading-relaxed">メーカー保証に準じた<strong>1年間</strong>の機器保証</p>
+        </div>
+        <!-- 工事保証 -->
+        <div class="bg-green-50 border-2 border-green-200 rounded-xl p-5 text-center">
+          <div class="w-14 h-14 bg-gradient-to-br from-green-400 to-green-600 text-white rounded-full flex items-center justify-center text-2xl mx-auto mb-3 shadow-lg">
+            <i class="fas fa-tools"></i>
+          </div>
+          <h3 class="font-black text-lg text-green-800 mb-1">工事保証</h3>
+          <div class="text-3xl font-black text-green-600 mb-2">5<span class="text-lg">年間</span></div>
+          <p class="text-xs text-gray-600 leading-relaxed">施工不良による不具合を<strong>完全保証</strong></p>
+        </div>
       </div>
     </div>
 
     <!-- 保証内容の詳細 -->
     <div class="space-y-6">
 
-      <!-- 保証期間 -->
+      <!-- 機器保証の詳細 -->
       <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-5">
         <h3 class="font-bold text-lg mb-3 flex items-center gap-2">
-          <i class="fas fa-calendar-check text-sky-500"></i>保証期間
+          <i class="fas fa-cog text-blue-500"></i>機器保証（1年間）
         </h3>
-        <div class="bg-sky-50 rounded-xl p-4">
-          <p class="text-sm text-gray-700 leading-relaxed">工事完了日（引渡日）から<strong>1年間</strong></p>
+        <div class="bg-blue-50 rounded-xl p-4 mb-3">
+          <p class="text-sm text-gray-700 leading-relaxed">エコキュート本体についてはメーカー保証に準じ、工事完了日（引渡日）から<strong>1年間</strong>保証いたします。</p>
         </div>
+        <h4 class="font-bold text-sm mb-2 text-gray-700">機器保証の対象</h4>
+        <ul class="space-y-2 text-sm text-gray-700">
+          <li class="flex items-start gap-2">
+            <i class="fas fa-check text-blue-500 mt-1 flex-shrink-0"></i>
+            <span>エコキュート本体の初期不良・動作不具合</span>
+          </li>
+          <li class="flex items-start gap-2">
+            <i class="fas fa-check text-blue-500 mt-1 flex-shrink-0"></i>
+            <span>リモコン・付属部品の初期不良</span>
+          </li>
+        </ul>
+        <p class="text-xs text-gray-500 mt-3"><i class="fas fa-info-circle text-blue-400 mr-1"></i>メーカー独自の延長保証（有料）もご案内可能です。お気軽にご相談ください。</p>
       </div>
 
-      <!-- 保証対象 -->
-      <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-5">
+      <!-- 工事保証の詳細 -->
+      <div class="bg-white rounded-2xl shadow-sm border-2 border-green-200 p-5">
         <h3 class="font-bold text-lg mb-3 flex items-center gap-2">
-          <i class="fas fa-check-circle text-green-500"></i>保証対象
+          <i class="fas fa-tools text-green-500"></i>工事保証（5年間）<span class="text-xs bg-green-100 text-green-700 px-2 py-0.5 rounded-full ml-1">完全保証</span>
         </h3>
+        <div class="bg-green-50 rounded-xl p-4 mb-3">
+          <p class="text-sm text-gray-700 leading-relaxed">弊社が施工いたしました工事に関しまして、工事完了日（引渡日）から<strong class="text-green-700">5年間</strong>、施工不良による不具合を<strong class="text-green-700">完全保証</strong>いたします。万が一不具合が発生した場合は、<strong class="text-green-700">無償にて修理・対応</strong>させていただきます。</p>
+        </div>
+        <h4 class="font-bold text-sm mb-2 text-gray-700">工事保証の対象</h4>
         <ul class="space-y-2 text-sm text-gray-700">
           <li class="flex items-start gap-2">
             <i class="fas fa-check text-green-500 mt-1 flex-shrink-0"></i>
@@ -76,10 +107,6 @@ export const warrantyPage = (c: Context) => {
           <i class="fas fa-times-circle text-red-400"></i>保証対象外となる場合
         </h3>
         <ul class="space-y-2 text-sm text-gray-700">
-          <li class="flex items-start gap-2">
-            <i class="fas fa-times text-red-400 mt-1 flex-shrink-0"></i>
-            <span>エコキュート本体（メーカー保証が適用されます）</span>
-          </li>
           <li class="flex items-start gap-2">
             <i class="fas fa-times text-red-400 mt-1 flex-shrink-0"></i>
             <span>お客様ご自身による改造・修理に起因する不具合</span>
@@ -137,41 +164,40 @@ export const warrantyPage = (c: Context) => {
         </div>
       </div>
 
-      <!-- メーカー保証について -->
+      <!-- 保証一覧表 -->
       <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-5">
         <h3 class="font-bold text-lg mb-3 flex items-center gap-2">
-          <i class="fas fa-industry text-purple-500"></i>メーカー保証について
+          <i class="fas fa-list-alt text-purple-500"></i>保証期間一覧
         </h3>
-        <p class="text-sm text-gray-700 leading-relaxed mb-3">エコキュート本体に関しては、各メーカーの保証規定が適用されます。主要メーカーの一般的な保証期間は以下のとおりです。</p>
         <div class="overflow-x-auto">
           <table class="w-full text-sm border-collapse">
             <thead>
               <tr class="bg-gray-50">
-                <th class="text-left py-2 px-3 font-bold text-gray-700 border-b">保証内容</th>
-                <th class="text-center py-2 px-3 font-bold text-gray-700 border-b">一般的な期間</th>
+                <th class="text-left py-2.5 px-3 font-bold text-gray-700 border-b">保証種別</th>
+                <th class="text-center py-2.5 px-3 font-bold text-gray-700 border-b">保証期間</th>
+                <th class="text-left py-2.5 px-3 font-bold text-gray-700 border-b">内容</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td class="py-2 px-3 border-b text-gray-600">本体（無償保証）</td>
-                <td class="py-2 px-3 border-b text-center font-bold">1〜2年</td>
+              <tr class="bg-blue-50/50">
+                <td class="py-2.5 px-3 border-b font-bold text-blue-700"><i class="fas fa-cog mr-1"></i>機器保証</td>
+                <td class="py-2.5 px-3 border-b text-center font-black text-blue-600">1年間</td>
+                <td class="py-2.5 px-3 border-b text-gray-600">メーカー保証に準拠</td>
+              </tr>
+              <tr class="bg-green-50/50">
+                <td class="py-2.5 px-3 border-b font-bold text-green-700"><i class="fas fa-tools mr-1"></i>工事保証</td>
+                <td class="py-2.5 px-3 border-b text-center font-black text-green-600">5年間</td>
+                <td class="py-2.5 px-3 border-b text-gray-600">施工不良を完全保証</td>
               </tr>
               <tr>
-                <td class="py-2 px-3 border-b text-gray-600">冷媒系統</td>
-                <td class="py-2 px-3 border-b text-center font-bold">3年</td>
-              </tr>
-              <tr>
-                <td class="py-2 px-3 border-b text-gray-600">タンク（缶体）</td>
-                <td class="py-2 px-3 border-b text-center font-bold">5年</td>
-              </tr>
-              <tr>
-                <td class="py-2 px-3 text-gray-600">有料延長保証</td>
-                <td class="py-2 px-3 text-center font-bold">5〜10年</td>
+                <td class="py-2.5 px-3 font-bold text-purple-700"><i class="fas fa-plus-circle mr-1"></i>メーカー延長保証</td>
+                <td class="py-2.5 px-3 text-center font-black text-purple-600">5〜10年</td>
+                <td class="py-2.5 px-3 text-gray-600">有料オプション（ご案内可）</td>
               </tr>
             </tbody>
           </table>
         </div>
-        <p class="text-xs text-gray-500 mt-3"><i class="fas fa-asterisk mr-1"></i>保証期間はメーカー・機種により異なります。詳細は各メーカーの保証書をご確認ください。</p>
+        <p class="text-xs text-gray-500 mt-3"><i class="fas fa-asterisk mr-1"></i>メーカー延長保証の期間・料金はメーカー・機種により異なります。詳細はお気軽にお問い合わせください。</p>
       </div>
 
     </div>
@@ -191,8 +217,8 @@ export const warrantyPage = (c: Context) => {
 `
 
   return c.html(layout({
-    title: '保証規定｜施工保証1年間｜袋井市のエコキュート専門店',
-    description: 'エコキュート工事の保証規定。工事完了日から1年間の施工品質を保証。施工不良による不具合は無償修理対応。袋井市の専門店イーエス・テックが責任を持って施工します。',
+    title: '保証規定｜機器保証1年・工事保証5年｜袋井市のエコキュート専門店',
+    description: 'エコキュート工事の保証規定。機器保証はメーカーに準じて1年間、工事保証は5年間で施工不良による不具合を完全保証。袋井市の専門店イーエス・テックが責任を持って施工します。',
     canonical: 'https://ecocute.estech.ltd/warranty'
   }, content))
 }
