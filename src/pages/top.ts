@@ -10,6 +10,7 @@ export const topPage = (c: Context) => {
     <div class="absolute top-10 right-10 w-64 h-64 bg-orange-400 rounded-full blur-3xl"></div>
     <div class="absolute bottom-10 left-10 w-48 h-48 bg-blue-300 rounded-full blur-3xl"></div>
   </div>
+
   
   <div class="relative max-w-6xl mx-auto px-4 py-10 md:py-16">
     <div class="md:flex md:items-center md:gap-10">
@@ -70,33 +71,8 @@ export const topPage = (c: Context) => {
       
       <!-- 右側ビジュアル -->
       <div class="hidden md:block md:flex-1">
-        <div class="relative">
-          <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 border border-white/20">
-            <div class="text-center">
-              <div class="w-24 h-24 bg-gradient-to-br from-orange-400 to-red-500 rounded-full flex items-center justify-center mx-auto mb-4 animate-float shadow-2xl">
-                <i class="fas fa-fire text-white text-4xl"></i>
-              </div>
-              <div class="text-xl font-bold mb-3">創業22年の実績</div>
-              <div class="grid grid-cols-2 gap-3">
-                <div class="bg-white/10 rounded-xl p-3">
-                  <div class="text-2xl font-black text-orange-300">15+</div>
-                  <div class="text-xs text-sky-200">保有資格数</div>
-                </div>
-                <div class="bg-white/10 rounded-xl p-3">
-                  <div class="text-2xl font-black text-orange-300">7社</div>
-                  <div class="text-xs text-sky-200">取扱メーカー</div>
-                </div>
-                <div class="bg-white/10 rounded-xl p-3">
-                  <div class="text-2xl font-black text-orange-300">10市町</div>
-                  <div class="text-xs text-sky-200">対応エリア</div>
-                </div>
-                <div class="bg-white/10 rounded-xl p-3">
-                  <div class="text-2xl font-black text-orange-300">0円</div>
-                  <div class="text-xs text-sky-200">お見積り無料</div>
-                </div>
-              </div>
-            </div>
-          </div>
+        <div class="relative flex justify-center">
+          <img src="/static/images/est-staff.png" alt="イーエス・テックのスタッフ" class="w-full max-w-md drop-shadow-2xl">
         </div>
       </div>
     </div>
