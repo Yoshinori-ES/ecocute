@@ -371,7 +371,7 @@ export const topPage = (c: Context) => {
           <div class="absolute left-3 md:relative md:left-auto w-7 h-7 bg-orange-500 text-white rounded-full flex items-center justify-center text-sm font-bold shadow z-10">3</div>
           <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-4 flex-1 md:text-center w-full">
             <h3 class="font-bold mb-1"><i class="fas fa-tools text-green-500 mr-1"></i>施工・お支払い</h3>
-            <p class="text-xs text-gray-500">ご納得いただいてから施工。現金・クレカ・振込対応。</p>
+            <p class="text-xs text-gray-500">ご納得いただいてから施工。現金・各種カード・振込対応。</p>
           </div>
         </div>
       </div>
@@ -499,7 +499,9 @@ export const topPage = (c: Context) => {
           <i class="fas fa-chevron-down text-gray-400 text-xs transition-transform"></i>
         </button>
         <div class="faq-answer px-4 pb-4 hidden">
-          <p class="text-sm text-gray-600">現金一括、各種クレジットカード、銀行振込に対応しています。</p>
+          <p class="text-sm text-gray-600 mb-3">現金一括、各種クレジットカード、銀行振込に対応しています。</p>
+          <img src="/static/images/payment-cards.png" alt="対応カードブランド: VISA, Mastercard, JCB, American Express, Diners Club, Discover, UnionPay, JCB PREMO（タッチ決済対応）" class="max-w-xs" loading="lazy">
+          <p class="text-xs text-gray-400 mt-1">※タッチ決済にも対応しております</p>
         </div>
       </div>
       <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden">
