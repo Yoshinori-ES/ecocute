@@ -1,5 +1,6 @@
 // 共通レイアウト - 全ページの共通HTML構造
 // SEO + 構造化データ + スマホファースト設計
+import { SITE_URL, BUSINESS, OGP_IMAGE, PAGE_NAMES } from '../config'
 
 interface LayoutOptions {
   title: string
@@ -7,7 +8,7 @@ interface LayoutOptions {
   canonical: string
   ogType?: string
   bodyClass?: string
-  structuredData?: object
+  structuredData?: object | object[]
 }
 
 // CTAフローティングバー（全ページ共通 スマホ下部固定）
@@ -129,6 +130,7 @@ const footer = `
           <li><a href="/company" class="hover:text-orange-400 transition-colors">会社概要・資格一覧</a></li>
           <li><a href="/guide" class="hover:text-orange-400 transition-colors">お役立ちガイド</a></li>
           <li><a href="/warranty" class="hover:text-orange-400 transition-colors">保証規定</a></li>
+        </ul>
       </div>
     </div>
 
@@ -188,12 +190,82 @@ const footer = `
 </footer>
 `
 
+// 店舗情報（MEO・AIO向け）全ページ共通
+const localBusinessLD = {
+  "@context": "https://schema.org",
+  "@type": ["LocalBusiness", "HomeAndConstructionBusiness"],
+  "@id": `${SITE_URL}/#business`,
+  "name": `${BUSINESS.brand}（${BUSINESS.company}）`,
+  "alternateName": [BUSINESS.company, "イーエス・テック", "ESTECH"],
+  "url": `${SITE_URL}/`,
+  "logo": `${SITE_URL}/static/images/logo.png`,
+  "image": [OGP_IMAGE, `${SITE_URL}/static/images/photo1_mitsubishi.jpg`],
+  "telephone": BUSINESS.telephone,
+  "faxNumber": BUSINESS.fax,
+  "email": BUSINESS.email,
+  "foundingDate": BUSINESS.foundingDate,
+  "address": {
+    "@type": "PostalAddress",
+    "postalCode": BUSINESS.postalCode,
+    "addressRegion": BUSINESS.region,
+    "addressLocality": BUSINESS.locality,
+    "streetAddress": BUSINESS.street,
+    "addressCountry": "JP"
+  },
+  "geo": { "@type": "GeoCoordinates", ...BUSINESS.geo },
+  "hasMap": `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(BUSINESS.fullAddress)}`,
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "opens": "08:30", "closes": "17:30"
+  }],
+  "areaServed": ["袋井市", "磐田市", "掛川市", "浜松市", "森町", "菊川市", "御前崎市", "牧之原市", "島田市", "吉田町"]
+    .map(name => ({ "@type": "AdministrativeArea", "name": name })),
+  "knowsAbout": ["エコキュート", "給湯器", "電気温水器", "ボイラー", "給水装置工事", "電気工事"],
+  "makesOffer": ["エコキュート交換", "エコキュート修理", "エコキュート新規設置", "給湯器交換", "ボイラーからエコキュートへの切替え"]
+    .map(name => ({ "@type": "Offer", "itemOffered": { "@type": "Service", "name": name } })),
+  "currenciesAccepted": "JPY",
+  "paymentAccepted": "現金, 銀行振込, クレジットカード, 交通系電子マネー, 電子マネー, QRコード決済",
+  "priceRange": "お見積り0円",
+  "description": "静岡県袋井市のエコキュート専門店。交換・修理・新規設置に対応。有資格者多数在籍、工事保証5年。給湯省エネ2026事業（補助金）対応。",
+  ...(BUSINESS.sameAs.length ? { "sameAs": BUSINESS.sameAs } : {})
+}
+
+// パンくずリスト（canonicalのURLから自動生成）
+function buildBreadcrumb(canonical: string) {
+  const path = canonical.replace(SITE_URL, '').replace(/\/$/, '')
+  if (!path) return null
+  const segments = path.split('/').filter(Boolean)
+  const items = [{ "@type": "ListItem", "position": 1, "name": "トップ", "item": `${SITE_URL}/` }]
+  let acc = ''
+  segments.forEach((seg, i) => {
+    acc += `/${seg}`
+    items.push({ "@type": "ListItem", "position": i + 2, "name": PAGE_NAMES[seg] || seg, "item": `${SITE_URL}${acc}` })
+  })
+  return { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": items }
+}
+
+// SNSシェアボタン（LINE・X・Facebook）各ページのURLで共有
+function shareBar(canonical: string, title: string) {
+  const u = encodeURIComponent(canonical)
+  const t = encodeURIComponent(title)
+  return `
+<aside id="share-bar" class="max-w-6xl mx-auto px-4 mt-10" aria-label="このページを共有">
+  <div class="flex flex-wrap items-center justify-center gap-2 text-sm">
+    <span class="text-gray-500 mr-1"><i class="fas fa-share-alt mr-1"></i>このページを共有</span>
+    <a href="https://social-plugins.line.me/lineit/share?url=${u}" target="_blank" rel="noopener" class="share-btn inline-flex items-center gap-1.5 bg-[#06C755] hover:opacity-90 text-white font-bold px-4 py-2 rounded-full"><i class="fab fa-line"></i>LINE</a>
+    <a href="https://twitter.com/intent/tweet?url=${u}&text=${t}" target="_blank" rel="noopener" class="share-btn inline-flex items-center gap-1.5 bg-black hover:opacity-90 text-white font-bold px-4 py-2 rounded-full"><i class="fab fa-x-twitter"></i>ポスト</a>
+    <a href="https://www.facebook.com/sharer/sharer.php?u=${u}" target="_blank" rel="noopener" class="share-btn inline-flex items-center gap-1.5 bg-[#1877F2] hover:opacity-90 text-white font-bold px-4 py-2 rounded-full"><i class="fab fa-facebook-f"></i>シェア</a>
+  </div>
+</aside>`
+}
+
 export function layout(options: LayoutOptions, content: string): string {
   const { title, description, canonical, ogType = 'website', structuredData } = options
+  const breadcrumbLD = buildBreadcrumb(canonical)
   
-  const structuredDataScript = structuredData
-    ? `<script type="application/ld+json">${JSON.stringify(structuredData)}</script>`
-    : ''
+  const structuredDataScript = (Array.isArray(structuredData) ? structuredData : structuredData ? [structuredData] : [])
+    .map(d => `<script type="application/ld+json">${JSON.stringify(d)}</script>`).join('\n  ')
 
   return `<!DOCTYPE html>
 <html lang="ja">
@@ -202,18 +274,33 @@ export function layout(options: LayoutOptions, content: string): string {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>${title}</title>
   <meta name="description" content="${description}">
-  <meta name="robots" content="index, follow">
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1">
   <link rel="canonical" href="${canonical}">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🔥</text></svg>" type="image/svg+xml">
   
-  <!-- OGP -->
+  <meta name="theme-color" content="#0369a1">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="apple-touch-icon" href="/static/images/apple-touch-icon.png">
+  <link rel="icon" href="/static/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="192x192" href="/static/images/icon-192.png">
+
+  <!-- OGP（Facebook・LINE等） -->
   <meta property="og:title" content="${title}">
   <meta property="og:description" content="${description}">
   <meta property="og:type" content="${ogType}">
   <meta property="og:url" content="${canonical}">
+  <meta property="og:image" content="${OGP_IMAGE}">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="袋井市のエコキュート専門店 株式会社イーエス・テック">
   <meta property="og:site_name" content="地域のエコキュート専門店｜株式会社イーエス・テック">
   <meta property="og:locale" content="ja_JP">
-  
+
+  <!-- X（旧Twitter） -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${title}">
+  <meta name="twitter:description" content="${description}">
+  <meta name="twitter:image" content="${OGP_IMAGE}">
+
   <!-- CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.0/css/all.min.css" rel="stylesheet">
@@ -236,47 +323,9 @@ export function layout(options: LayoutOptions, content: string): string {
   </script>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700;900&display=swap" rel="stylesheet">
 
-  <!-- 構造化データ -->
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"LocalBusiness",
-    "name":"地域のエコキュート専門店（株式会社イーエス・テック）",
-    "image":"",
-    "telephone":"050-1720-1813",
-    "email":"kaden@estech.info",
-    "faxNumber":"050-1808-3052",
-    "address":{
-      "@type":"PostalAddress",
-      "streetAddress":"山科3229番地の1",
-      "addressLocality":"袋井市",
-      "addressRegion":"静岡県",
-      "postalCode":"437-0066",
-      "addressCountry":"JP"
-    },
-    "geo":{
-      "@type":"GeoCoordinates",
-      "latitude":34.7465,
-      "longitude":137.9256
-    },
-    "url":"https://estech-ecocute.pages.dev",
-    "openingHours":"Mo-Fr 08:30-17:30",
-    "areaServed":[
-      {"@type":"City","name":"袋井市"},
-      {"@type":"City","name":"磐田市"},
-      {"@type":"City","name":"掛川市"},
-      {"@type":"City","name":"浜松市"},
-      {"@type":"City","name":"森町"},
-      {"@type":"City","name":"菊川市"},
-      {"@type":"City","name":"御前崎市"},
-      {"@type":"City","name":"牧之原市"},
-      {"@type":"City","name":"島田市"},
-      {"@type":"City","name":"吉田町"}
-    ],
-    "priceRange":"¥",
-    "description":"静岡県袋井市のエコキュート専門店。交換・修理・新規導入はお任せください。お電話でスムーズに受付。有資格者多数在籍。給湯省エネ2026事業（補助金）対応。"
-  }
-  </script>
+  <!-- 構造化データ（店舗情報・パンくず） -->
+  <script type="application/ld+json">${JSON.stringify(localBusinessLD)}</script>
+  ${breadcrumbLD ? `<script type="application/ld+json">${JSON.stringify(breadcrumbLD)}</script>` : ''}
   ${structuredDataScript}
 
   <style>
@@ -299,6 +348,7 @@ export function layout(options: LayoutOptions, content: string): string {
   <main>
     ${content}
   </main>
+  ${shareBar(canonical, title)}
   ${footer}
   ${floatingCTA}
 

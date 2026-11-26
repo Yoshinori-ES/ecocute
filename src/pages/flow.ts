@@ -1,5 +1,6 @@
 import type { Context } from 'hono'
 import { layout } from './layout'
+import { SITE_URL } from '../config'
 
 export const flowPage = (c: Context) => {
   const content = `
@@ -141,6 +142,6 @@ export const flowPage = (c: Context) => {
   return c.html(layout({
     title: 'ご依頼の流れ｜お問い合わせから施工完了まで｜袋井市のエコキュート専門店',
     description: 'エコキュートの交換・修理のご依頼方法を9ステップで解説。お見積り0円・強引な営業なし。時間外も受付対応。袋井市の専門店が丁寧に対応します。',
-    canonical: 'https://estech-ecocute.pages.dev/flow'
+    canonical: `${SITE_URL}/flow`
   }, content))
 }

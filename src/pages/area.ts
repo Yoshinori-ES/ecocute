@@ -1,5 +1,6 @@
 import type { Context } from 'hono'
 import { layout } from './layout'
+import { SITE_URL } from '../config'
 
 export const areaPage = (c: Context) => {
   const content = `
@@ -124,6 +125,6 @@ export const areaPage = (c: Context) => {
   return c.html(layout({
     title: '対応エリア｜袋井市・磐田市・掛川市・浜松市ほか10市町｜エコキュート専門店',
     description: '袋井市を拠点にエコキュートの交換・修理に対応。袋井市・磐田市・掛川市・森町・浜松市・菊川市・御前崎市・牧之原市・島田市・吉田町の10市町をカバー。出張費2,000円〜。',
-    canonical: 'https://estech-ecocute.pages.dev/area'
+    canonical: `${SITE_URL}/area`
   }, content))
 }

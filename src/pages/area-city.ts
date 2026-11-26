@@ -1,5 +1,6 @@
 import type { Context } from 'hono'
 import { layout } from './layout'
+import { SITE_URL } from '../config'
 
 // ===================================================================
 // 都市別ロングテールSEOページ自動生成
@@ -508,7 +509,7 @@ export function createCityPageHandler(citySlug: string, categorySlug: string) {
     return c.html(layout({
       title: `${city.name}の${category.pageTitle}｜地域のエコキュート専門店（イーエス・テック）`,
       description: `${city.name}${category.metaDesc}`,
-      canonical: `https://estech-ecocute.pages.dev/area/${city.slug}/${category.slug}`,
+      canonical: `${SITE_URL}/area/${city.slug}/${category.slug}`,
       structuredData: {
         "@context": "https://schema.org",
         "@type": "Service",
@@ -623,7 +624,7 @@ export function createCityIndexHandler(citySlug: string) {
     return c.html(layout({
       title: `${city.name}のエコキュート・給湯器・ボイラー｜交換・修理なら地域のエコキュート専門店`,
       description: `${city.name}のエコキュート交換・修理、給湯器交換、ボイラーからの切替えなら地域のエコキュート専門店（イーエス・テック）。袋井市から${city.driveTime}で駆けつけ。有資格者多数在籍。お見積り0円。`,
-      canonical: `https://estech-ecocute.pages.dev/area/${city.slug}`
+      canonical: `${SITE_URL}/area/${city.slug}`
     }, content))
   }
 }

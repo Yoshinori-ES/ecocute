@@ -1,5 +1,6 @@
 import type { Context } from 'hono'
 import { layout } from './layout'
+import { SITE_URL } from '../config'
 
 export const warrantyPage = (c: Context) => {
   const content = `
@@ -219,6 +220,6 @@ export const warrantyPage = (c: Context) => {
   return c.html(layout({
     title: '保証規定｜機器保証1年・工事保証5年｜袋井市のエコキュート専門店',
     description: 'エコキュート工事の保証規定。機器保証はメーカーに準じて1年間、工事保証は5年間で施工不良による不具合を完全保証。袋井市の専門店イーエス・テックが責任を持って施工します。',
-    canonical: 'https://ecocute.estech.ltd/warranty'
+    canonical: `${SITE_URL}/warranty`
   }, content))
 }

@@ -1,5 +1,6 @@
 import type { Context } from 'hono'
 import { layout } from './layout'
+import { SITE_URL } from '../config'
 
 export const errorCodesPage = (c: Context) => {
   const content = `
@@ -294,6 +295,6 @@ function showMaker(maker) {
   return c.html(layout({
     title: 'エコキュート エラーコード一覧【全メーカー対応】｜袋井市のエコキュート専門店',
     description: 'Panasonic・三菱電機・日立・東芝・ダイキン・コロナ・ノーリツのエコキュートエラーコード一覧。自己解決可能か修理が必要かを色分けで判定。袋井市の専門店が対処法を詳しく解説。',
-    canonical: 'https://estech-ecocute.pages.dev/error-codes'
+    canonical: `${SITE_URL}/error-codes`
   }, content))
 }

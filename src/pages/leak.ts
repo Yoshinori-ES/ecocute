@@ -1,5 +1,6 @@
 import type { Context } from 'hono'
 import { layout } from './layout'
+import { SITE_URL } from '../config'
 
 export const leakPage = (c: Context) => {
   const content = `
@@ -326,7 +327,7 @@ export const leakPage = (c: Context) => {
   return c.html(layout({
     title: '【緊急】エコキュートの漏水・故障対処法｜袋井市のエコキュート専門店',
     description: 'エコキュートの水漏れ・故障でお困りですか？まずは止水栓を閉め、ブレーカーを落としましょう。袋井市の専門店が応急処置から修理まで丁寧にサポート。時間外も電話受付で対応。',
-    canonical: 'https://estech-ecocute.pages.dev/leak',
+    canonical: `${SITE_URL}/leak`,
     structuredData
   }, content))
 }

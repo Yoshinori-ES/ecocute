@@ -1,5 +1,6 @@
 import type { Context } from 'hono'
 import { layout } from './layout'
+import { SITE_URL } from '../config'
 
 export const companyPage = (c: Context) => {
   const content = `
@@ -110,6 +111,6 @@ export const companyPage = (c: Context) => {
   return c.html(layout({
     title: '会社概要・資格一覧｜袋井市のエコキュート専門店（イーエス・テック）',
     description: '株式会社イーエス・テックの会社概要。袋井市指定給水装置工事事業者。15種類以上の専門資格保有。電気工事業・産業廃棄物収集運搬業など各種許認可取得済み。',
-    canonical: 'https://estech-ecocute.pages.dev/company'
+    canonical: `${SITE_URL}/company`
   }, content))
 }

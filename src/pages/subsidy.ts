@@ -1,5 +1,6 @@
 import type { Context } from 'hono'
 import { layout } from './layout'
+import { SITE_URL } from '../config'
 
 export const subsidyPage = (c: Context) => {
   const content = `
@@ -179,6 +180,6 @@ export const subsidyPage = (c: Context) => {
   return c.html(layout({
     title: '給湯省エネ2026事業｜エコキュート補助金 最大12万円｜袋井市のエコキュート専門店',
     description: '2026年もエコキュート交換に使える国の補助金「給湯省エネ2026事業」を解説。基本7万円・高効率機種10万円＋加算あり。最大12万円。袋井市の登録事業者が申請代行。',
-    canonical: 'https://estech-ecocute.pages.dev/subsidy'
+    canonical: `${SITE_URL}/subsidy`
   }, content))
 }

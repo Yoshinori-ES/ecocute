@@ -1,5 +1,6 @@
 import type { Context } from 'hono'
 import { layout } from './layout'
+import { SITE_URL } from '../config'
 
 // ===================================================================
 // トラブル系ロングテールKWページ
@@ -485,7 +486,7 @@ export function createTroublePageHandler(slug: string) {
     return c.html(layout({
       title: `${page.title}｜袋井市のエコキュート専門店（イーエス・テック）`,
       description: page.metaDesc,
-      canonical: `https://estech-ecocute.pages.dev/guide/${page.slug}`
+      canonical: `${SITE_URL}/guide/${page.slug}`
     }, fullContent))
   }
 }
@@ -541,7 +542,7 @@ export function guideIndexHandler(c: Context) {
   return c.html(layout({
     title: 'エコキュートお役立ちガイド｜故障・修理・交換費用・寿命｜袋井市の専門店',
     description: 'エコキュートの故障・修理・交換費用・寿命・お湯が出ないなどのお悩みに、袋井市の専門店イーエス・テックが専門家目線で回答。トラブル解決のヒントが見つかります。',
-    canonical: 'https://estech-ecocute.pages.dev/guide'
+    canonical: `${SITE_URL}/guide`
   }, content))
 }
 

@@ -1,5 +1,20 @@
 import type { Context } from 'hono'
 import { layout } from './layout'
+import { SITE_URL } from '../config'
+
+// よくある質問（画面表示と同じ内容をAI検索・Google向けに構造化）
+const faqLD = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    ["見積りだけでも大丈夫ですか？", "はい、もちろんです。お見積りは0円です。見積りだけのお問い合わせも大歓迎です。強引な営業は一切いたしませんのでご安心ください。"],
+    ["時間外も電話に出るのですか？人間と話せますか？", "最初はお客様の状況を丁寧にお聞きし、内容を正確に記録します。その後、担当者から折り返しご連絡いたします。人間のスタッフが必ず対応いたしますのでご安心ください。"],
+    ["エコキュートの交換費用の目安は？", "設置環境やメーカー・機種により異なりますが、当店ではメーカー直接仕入れによる格安価格でご提供しています。また給湯省エネ2026事業の補助金（最大12万円）もご活用いただけます。"],
+    ["支払い方法は何がありますか？", "現金一括、銀行振込のほか、クレジットカード（タッチ決済可）・交通系電子マネー・iD／QUICPay等の電子マネー・PayPay等のQRコード決済に対応しています。"],
+    ["出張費はかかりますか？", "出張費は2,000円〜となります。エリアや状況により異なりますので、お電話の際にご確認ください。"],
+    ["保証はありますか？", "機器保証はメーカー保証に準じて1年、工事保証は5年間です。施工不良による不具合は無償で対応いたします。"]
+  ].map(([q, a]) => ({ "@type": "Question", "name": q, "acceptedAnswer": { "@type": "Answer", "text": a } }))
+}
 
 export const topPage = (c: Context) => {
   const content = `
@@ -534,6 +549,15 @@ export const topPage = (c: Context) => {
           <p class="text-sm text-gray-600">出張費は2,000円〜となります。エリアや状況により異なりますので、お電話の際にご確認ください。</p>
         </div>
       </div>
+      <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden">
+        <button onclick="this.parentElement.classList.toggle('open')" class="w-full flex items-center justify-between p-4 text-left hover:bg-gray-100 transition-colors">
+          <span class="font-bold text-sm pr-4"><i class="fas fa-question-circle text-orange-400 mr-2"></i>保証はありますか？</span>
+          <i class="fas fa-chevron-down text-gray-400 text-xs transition-transform"></i>
+        </button>
+        <div class="faq-answer px-4 pb-4 hidden">
+          <p class="text-sm text-gray-600">機器保証はメーカー保証に準じて<strong>1年</strong>、工事保証は<strong>5年間</strong>です。施工不良による不具合は無償で対応いたします。<a href="/warranty" class="text-orange-600 underline">保証規定を見る</a></p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -589,7 +613,8 @@ document.querySelectorAll('#faq-list .bg-gray-50').forEach(item => {
   return c.html(layout({
     title: '袋井市のエコキュート専門店｜交換・修理・新規導入なら地域のエコキュート専門店（イーエス・テック）',
     description: '静岡県袋井市のエコキュート交換・修理・新規導入専門店。時間外も受付対応。有資格者多数在籍。お見積り0円。給湯省エネ2026事業（補助金最大12万円）対応。袋井市・磐田市・掛川市・浜松市対応。',
-    canonical: 'https://estech-ecocute.pages.dev/',
-    ogType: 'website'
+    canonical: `${SITE_URL}/`,
+    ogType: 'website',
+    structuredData: faqLD
   }, content))
 }
