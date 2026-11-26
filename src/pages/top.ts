@@ -278,10 +278,6 @@ export const topPage = (c: Context) => {
         <span class="font-bold text-gray-700">HITACHI</span>
       </div>
       <div class="bg-gray-50 rounded-xl px-6 py-4 border border-gray-200 flex items-center gap-2 card-hover">
-        <i class="fas fa-industry text-red-700"></i>
-        <span class="font-bold text-gray-700">TOSHIBA</span>
-      </div>
-      <div class="bg-gray-50 rounded-xl px-6 py-4 border border-gray-200 flex items-center gap-2 card-hover">
         <i class="fas fa-industry text-blue-600"></i>
         <span class="font-bold text-gray-700">DAIKIN</span>
       </div>
@@ -294,7 +290,8 @@ export const topPage = (c: Context) => {
         <span class="font-bold text-gray-700">ノーリツ</span>
       </div>
     </div>
-    <p class="text-sm text-gray-500 mt-4">主要7メーカーをはじめ、それ以外のメーカーもお問い合わせください。</p>
+    <p class="text-sm text-gray-500 mt-4">主要6メーカーをはじめ、それ以外のメーカーもお問い合わせください。</p>
+    <p id="toshiba-repair-note" class="text-sm text-gray-600 mt-2"><i class="fas fa-wrench text-orange-400 mr-1"></i>東芝製エコキュート（2024年3月 販売終了）の<strong>修理も承ります</strong>。</p>
   </div>
 </section>
 

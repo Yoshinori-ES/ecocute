@@ -155,6 +155,7 @@ export const errorCodesPage = (c: Context) => {
       <h2 class="text-xl font-black mb-4 flex items-center gap-2">
         <span class="w-2 h-8 bg-red-700 rounded-full"></span>東芝（TOSHIBA）エラーコード一覧
       </h2>
+      <p class="text-sm text-gray-600 mb-3"><i class="fas fa-info-circle text-sky-500 mr-1"></i>東芝製エコキュートは2024年3月に販売を終了していますが、当店で修理を承ります。</p>
       <div class="overflow-x-auto rounded-xl border border-gray-200">
         <table class="w-full text-sm">
           <thead class="bg-gray-100"><tr><th class="px-3 py-2 text-left font-bold w-20">コード</th><th class="px-3 py-2 text-left font-bold">症状・原因</th><th class="px-3 py-2 text-left font-bold w-32">対処法</th><th class="px-3 py-2 text-center font-bold w-16">判定</th></tr></thead>

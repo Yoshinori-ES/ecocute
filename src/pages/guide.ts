@@ -193,11 +193,12 @@ const troublePages: TroublePage[] = [
         <span class="bg-gray-100 px-4 py-2 rounded-lg text-sm font-bold">三菱電機</span>
         <span class="bg-gray-100 px-4 py-2 rounded-lg text-sm font-bold">Panasonic</span>
         <span class="bg-gray-100 px-4 py-2 rounded-lg text-sm font-bold">HITACHI（日立）</span>
-        <span class="bg-gray-100 px-4 py-2 rounded-lg text-sm font-bold">TOSHIBA（東芝）</span>
+        <span class="bg-gray-100 px-4 py-2 rounded-lg text-sm font-bold">TOSHIBA（東芝）<span class="text-xs font-normal text-gray-500 ml-1">※販売終了品</span></span>
         <span class="bg-gray-100 px-4 py-2 rounded-lg text-sm font-bold">DAIKIN（ダイキン）</span>
         <span class="bg-gray-100 px-4 py-2 rounded-lg text-sm font-bold">CORONA（コロナ）</span>
         <span class="bg-gray-100 px-4 py-2 rounded-lg text-sm font-bold">ノーリツ</span>
       </div>
+      <p class="text-xs text-gray-500 mt-3">※東芝製エコキュートは2024年3月に販売を終了していますが、修理は承ります。部品の供給状況により修理が難しい場合は、他メーカーへのお取り替えをご提案します。</p>
     </div>`
   },
   {
