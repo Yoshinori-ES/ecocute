@@ -36,7 +36,7 @@ const header = `
     <!-- トップバー -->
     <div class="bg-gradient-to-r from-sky-700 to-sky-800 text-white text-xs py-1 px-4 flex justify-between items-center">
       <span><i class="fas fa-clock mr-1"></i>営業時間 8:30〜17:30（平日）</span>
-      <span class="hidden sm:inline"><i class="fas fa-map-marker-alt mr-1"></i>〒437-0066 静岡県袋井市山科3229番地の1</span>
+      <span class="hidden sm:inline"><i class="fas fa-map-marker-alt mr-1"></i>〒437-0066 静岡県袋井市山科３２２９番地の１</span>
     </div>
     <!-- メインヘッダー -->
     <div class="flex items-center justify-between px-4 py-2">
@@ -107,7 +107,7 @@ const footer = `
           <span class="font-bold text-white">地域のエコキュート専門店</span>
         </div>
         <p class="text-sm text-gray-400">株式会社イーエス・テック</p>
-        <p class="text-sm text-gray-400 mt-1">〒437-0066 静岡県袋井市山科3229番地の1</p>
+        <p class="text-sm text-gray-400 mt-1">〒437-0066 静岡県袋井市山科３２２９番地の１</p>
         <p class="text-sm text-gray-400 mt-1">設立 2004年1月</p>
       </div>
       <div>

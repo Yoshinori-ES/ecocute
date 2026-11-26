@@ -12,8 +12,8 @@ export const BUSINESS = {
   postalCode: '437-0066',
   region: '静岡県',
   locality: '袋井市',
-  street: '山科3229番地の1',
-  fullAddress: '〒437-0066 静岡県袋井市山科3229番地の1',
+  street: '山科３２２９番地の１',
+  fullAddress: '〒437-0066 静岡県袋井市山科３２２９番地の１',
   // 国土地理院の住所検索（山科3229番地）による座標
   geo: { latitude: 34.762589, longitude: 137.907166 },
   foundingDate: '2004-01',

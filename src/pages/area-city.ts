@@ -520,7 +520,7 @@ export function createCityPageHandler(citySlug: string, categorySlug: string) {
           "telephone": "050-1720-1813",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "山科3229番地の1",
+            "streetAddress": "山科３２２９番地の１",
             "addressLocality": "袋井市",
             "addressRegion": "静岡県",
             "postalCode": "437-0066"

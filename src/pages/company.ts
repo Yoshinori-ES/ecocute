@@ -26,7 +26,7 @@ export const companyPage = (c: Context) => {
             <tr><th class="px-4 py-3 text-left bg-gray-50 font-bold w-1/3">屋号</th><td class="px-4 py-3">地域のエコキュート専門店</td></tr>
             <tr><th class="px-4 py-3 text-left bg-gray-50 font-bold">会社名</th><td class="px-4 py-3">株式会社イーエス・テック</td></tr>
             <tr><th class="px-4 py-3 text-left bg-gray-50 font-bold">設立</th><td class="px-4 py-3">2004年1月</td></tr>
-            <tr><th class="px-4 py-3 text-left bg-gray-50 font-bold">所在地</th><td class="px-4 py-3">〒437-0066 静岡県袋井市山科3229番地の1</td></tr>
+            <tr><th class="px-4 py-3 text-left bg-gray-50 font-bold">所在地</th><td class="px-4 py-3">〒437-0066 静岡県袋井市山科３２２９番地の１</td></tr>
             <tr><th class="px-4 py-3 text-left bg-gray-50 font-bold">主営業品目</th><td class="px-4 py-3">エコキュート専門（交換・修理・新規導入）</td></tr>
             <tr><th class="px-4 py-3 text-left bg-gray-50 font-bold">営業時間</th><td class="px-4 py-3">8:30〜17:30（平日）</td></tr>
             <tr><th class="px-4 py-3 text-left bg-gray-50 font-bold">TEL</th><td class="px-4 py-3"><a href="tel:05017201813" class="text-orange-600 font-bold hover:underline">050-1720-1813</a><span class="text-xs text-gray-500 ml-1">（時間外も受付対応）</span></td></tr>
@@ -99,10 +99,10 @@ export const companyPage = (c: Context) => {
         <iframe 
           src="https://maps.google.com/maps?q=%E9%9D%99%E5%B2%A1%E7%9C%8C%E8%A2%8B%E4%BA%95%E5%B8%82%E5%B1%B1%E7%A7%913229%E7%95%AA%E5%9C%B0%E3%81%AE1&t=m&z=16&output=embed&hl=ja" 
           width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy"
-          title="株式会社イーエス・テック 所在地 - 〒437-0066 静岡県袋井市山科3229番地の1">
+          title="株式会社イーエス・テック 所在地 - 〒437-0066 静岡県袋井市山科３２２９番地の１">
         </iframe>
       </div>
-      <p class="text-sm text-gray-500 mt-2"><i class="fas fa-map-marker-alt text-red-400 mr-1"></i>〒437-0066 静岡県袋井市山科3229番地の1</p>
+      <p class="text-sm text-gray-500 mt-2"><i class="fas fa-map-marker-alt text-red-400 mr-1"></i>〒437-0066 静岡県袋井市山科３２２９番地の１</p>
     </div>
   </div>
 </section>
