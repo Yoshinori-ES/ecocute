@@ -22,7 +22,7 @@
 | `/warranty` | 保証規定（機器保証1年・工事保証5年） |
 | `/sitemap.xml` `/robots.txt` `/llms.txt` | 検索エンジン・AI向けファイル |
 
-## 集客対策（SEO・MEO・AIO・SNS）
+## 集客対策（SEO・MEO・AIO）
 ### SEO（検索エンジン）
 - 全ページ canonical を本番ドメインに統一（`src/config.ts` の `SITE_URL` で一元管理）
 - パンくずの構造化データ（BreadcrumbList）を全ページ自動生成
@@ -38,10 +38,9 @@
 - `llms.txt`：会社情報・保証・対応エリア・支払い方法をAI向けに要約
 - robots.txt で主要なAIクローラーを許可
 
-### SNS
-- OGP画像（1200×630、`public/static/images/ogp.jpg`）、X用カード（summary_large_image）
-- 全ページ下部に LINE・X・Facebook のシェアボタン
-- SNSやGoogleビジネスプロフィールのURLが決まったら `src/config.ts` の `sameAs` に追加する
+### OGP（リンク共有時の表示）
+- LINE・メール等でURLを送ったときに表示される画像（`public/static/images/ogp.jpg`）
+- SNSのシェアボタン・X用カード設定は 2026-11-26 に取り下げ済み
 
 ## データ・設定
 - データベースなし（全ページが静的コンテンツ）

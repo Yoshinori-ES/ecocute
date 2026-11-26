@@ -245,21 +245,6 @@ function buildBreadcrumb(canonical: string) {
   return { "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": items }
 }
 
-// SNSシェアボタン（LINE・X・Facebook）各ページのURLで共有
-function shareBar(canonical: string, title: string) {
-  const u = encodeURIComponent(canonical)
-  const t = encodeURIComponent(title)
-  return `
-<aside id="share-bar" class="max-w-6xl mx-auto px-4 mt-10" aria-label="このページを共有">
-  <div class="flex flex-wrap items-center justify-center gap-2 text-sm">
-    <span class="text-gray-500 mr-1"><i class="fas fa-share-alt mr-1"></i>このページを共有</span>
-    <a href="https://social-plugins.line.me/lineit/share?url=${u}" target="_blank" rel="noopener" class="share-btn inline-flex items-center gap-1.5 bg-[#06C755] hover:opacity-90 text-white font-bold px-4 py-2 rounded-full"><i class="fab fa-line"></i>LINE</a>
-    <a href="https://twitter.com/intent/tweet?url=${u}&text=${t}" target="_blank" rel="noopener" class="share-btn inline-flex items-center gap-1.5 bg-black hover:opacity-90 text-white font-bold px-4 py-2 rounded-full"><i class="fab fa-x-twitter"></i>ポスト</a>
-    <a href="https://www.facebook.com/sharer/sharer.php?u=${u}" target="_blank" rel="noopener" class="share-btn inline-flex items-center gap-1.5 bg-[#1877F2] hover:opacity-90 text-white font-bold px-4 py-2 rounded-full"><i class="fab fa-facebook-f"></i>シェア</a>
-  </div>
-</aside>`
-}
-
 export function layout(options: LayoutOptions, content: string): string {
   const { title, description, canonical, ogType = 'website', structuredData } = options
   const breadcrumbLD = buildBreadcrumb(canonical)
@@ -283,7 +268,7 @@ export function layout(options: LayoutOptions, content: string): string {
   <link rel="icon" href="/static/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="192x192" href="/static/images/icon-192.png">
 
-  <!-- OGP（Facebook・LINE等） -->
+  <!-- OGP（リンクを共有したときの表示） -->
   <meta property="og:title" content="${title}">
   <meta property="og:description" content="${description}">
   <meta property="og:type" content="${ogType}">
@@ -294,12 +279,6 @@ export function layout(options: LayoutOptions, content: string): string {
   <meta property="og:image:alt" content="袋井市のエコキュート専門店 株式会社イーエス・テック">
   <meta property="og:site_name" content="地域のエコキュート専門店｜株式会社イーエス・テック">
   <meta property="og:locale" content="ja_JP">
-
-  <!-- X（旧Twitter） -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="${title}">
-  <meta name="twitter:description" content="${description}">
-  <meta name="twitter:image" content="${OGP_IMAGE}">
 
   <!-- CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -348,7 +327,6 @@ export function layout(options: LayoutOptions, content: string): string {
   <main>
     ${content}
   </main>
-  ${shareBar(canonical, title)}
   ${footer}
   ${floatingCTA}
 

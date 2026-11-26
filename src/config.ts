@@ -17,8 +17,8 @@ export const BUSINESS = {
   // 国土地理院の住所検索（山科3229番地）による座標
   geo: { latitude: 34.762589, longitude: 137.907166 },
   foundingDate: '2004-01',
-  // Googleビジネスプロフィール・SNSのURLが決まったらここに追加する
-  // 例: 'https://g.page/r/xxxx', 'https://www.instagram.com/xxxx'
+  // GoogleビジネスプロフィールのURLが決まったらここに追加する
+  // 例: 'https://g.page/r/xxxx'
   sameAs: [] as string[]
 }
 
