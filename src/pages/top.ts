@@ -193,7 +193,7 @@ export const topPage = (c: Context) => {
             <h3 class="text-lg font-bold">袋井市拠点の地域密着｜迅速に駆けつけます</h3>
           </div>
           <p class="text-sm text-gray-600 leading-relaxed">
-            本社は袋井市山科。<strong>袋井市・磐田市・掛川市を中心に10市町</strong>をカバー。地域だからこそ対応が早い。
+            本社は〒437-0066 静岡県袋井市山科3229番地の1。<strong>袋井市・磐田市・掛川市を中心に10市町</strong>をカバー。地域だからこそ対応が早い。
             「顔が見える業者」として、施工後のアフターサポートも責任を持って対応します。
           </p>
           <a href="/area" class="inline-flex items-center gap-1 mt-2 text-xs text-green-600 hover:text-green-700 font-medium">
@@ -438,7 +438,7 @@ export const topPage = (c: Context) => {
           <iframe 
             src="https://maps.google.com/maps?q=%E9%9D%99%E5%B2%A1%E7%9C%8C%E8%A2%8B%E4%BA%95%E5%B8%82%E5%B1%B1%E7%A7%913229%E7%95%AA%E5%9C%B0%E3%81%AE1&t=m&z=15&output=embed&hl=ja" 
             width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-            title="イーエス・テック所在地 - 袋井市山科">
+            title="イーエス・テック所在地 - 〒437-0066 静岡県袋井市山科3229番地の1">
           </iframe>
         </div>
       </div>

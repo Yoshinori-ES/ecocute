@@ -89,10 +89,10 @@ export const areaPage = (c: Context) => {
           <iframe 
             src="https://maps.google.com/maps?q=%E9%9D%99%E5%B2%A1%E7%9C%8C%E8%A2%8B%E4%BA%95%E5%B8%82%E5%B1%B1%E7%A7%913229%E7%95%AA%E5%9C%B0%E3%81%AE1&t=m&z=11&output=embed&hl=ja" 
             width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
-            title="対応エリアマップ - 袋井市山科を中心に半径約50km">
+            title="対応エリアマップ - 本社（〒437-0066 静岡県袋井市山科3229番地の1）を中心に半径約50km">
           </iframe>
           <div class="bg-white p-4">
-            <p class="text-sm font-bold"><i class="fas fa-building text-sky-500 mr-1"></i>本社：静岡県袋井市山科3229番地の1</p>
+            <p class="text-sm font-bold"><i class="fas fa-building text-sky-500 mr-1"></i>本社：〒437-0066 静岡県袋井市山科3229番地の1</p>
             <p class="text-xs text-gray-500 mt-1">袋井市を中心に半径約50kmをカバー</p>
           </div>
         </div>
