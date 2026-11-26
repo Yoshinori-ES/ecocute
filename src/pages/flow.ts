@@ -112,11 +112,13 @@ export const flowPage = (c: Context) => {
             <p class="text-sm text-gray-600 leading-relaxed mb-3">以下のお支払い方法に対応しております。</p>
             <div class="flex flex-wrap gap-2 mb-3">
               <span class="bg-white border border-green-200 px-3 py-1.5 rounded-lg text-xs font-bold"><i class="fas fa-money-bill-wave text-green-500 mr-1"></i>現金一括</span>
-              <span class="bg-white border border-green-200 px-3 py-1.5 rounded-lg text-xs font-bold"><i class="fas fa-credit-card text-blue-500 mr-1"></i>各種クレジットカード</span>
               <span class="bg-white border border-green-200 px-3 py-1.5 rounded-lg text-xs font-bold"><i class="fas fa-university text-gray-500 mr-1"></i>銀行振込</span>
+              <span class="bg-white border border-green-200 px-3 py-1.5 rounded-lg text-xs font-bold"><i class="fas fa-credit-card text-blue-500 mr-1"></i>クレジットカード（タッチ決済可）</span>
+              <span class="bg-white border border-green-200 px-3 py-1.5 rounded-lg text-xs font-bold"><i class="fas fa-train text-pink-500 mr-1"></i>交通系電子マネー</span>
+              <span class="bg-white border border-green-200 px-3 py-1.5 rounded-lg text-xs font-bold"><i class="fas fa-wifi text-amber-500 mr-1"></i>iD・QUICPay等電子マネー</span>
+              <span class="bg-white border border-green-200 px-3 py-1.5 rounded-lg text-xs font-bold"><i class="fas fa-qrcode text-red-500 mr-1"></i>PayPay等QRコード決済</span>
             </div>
-            <img src="/static/images/payment-cards.png" alt="対応カードブランド: VISA, Mastercard, JCB, American Express, Diners Club, Discover, UnionPay, JCB PREMO（タッチ決済対応）" class="max-w-xs" loading="lazy">
-            <p class="text-xs text-gray-400 mt-1">※タッチ決済にも対応しております</p>
+            <img src="/static/images/payment-methods.jpg" alt="対応決済ブランド一覧（クレジットカード・交通系電子マネー・電子マネー・QRコード決済）" class="w-full max-w-sm rounded-lg border border-green-200 bg-white" loading="lazy">
           </div>
         </div>
       </div>

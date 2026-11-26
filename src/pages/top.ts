@@ -371,7 +371,7 @@ export const topPage = (c: Context) => {
           <div class="absolute left-3 md:relative md:left-auto w-7 h-7 bg-orange-500 text-white rounded-full flex items-center justify-center text-sm font-bold shadow z-10">3</div>
           <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-4 flex-1 md:text-center w-full">
             <h3 class="font-bold mb-1"><i class="fas fa-tools text-green-500 mr-1"></i>施工・お支払い</h3>
-            <p class="text-xs text-gray-500">ご納得いただいてから施工。現金・各種カード・振込対応。</p>
+            <p class="text-xs text-gray-500">ご納得いただいてから施工。現金・カード・電子マネー・QR決済・振込対応。</p>
           </div>
         </div>
       </div>
@@ -381,6 +381,28 @@ export const topPage = (c: Context) => {
       <a href="/flow" class="inline-flex items-center gap-2 text-orange-600 hover:text-orange-700 font-bold text-sm">
         詳しい流れを見る<i class="fas fa-arrow-right"></i>
       </a>
+    </div>
+  </div>
+</section>
+
+<!-- ======= お支払い方法 ======= -->
+<section id="payment-section" class="py-10 px-4 bg-white section-fade">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-center text-2xl md:text-3xl font-black mb-2">
+      <span class="gradient-text">お支払い方法</span>
+    </h2>
+    <p class="text-center text-gray-500 text-sm mb-6">現金・銀行振込に加え、キャッシュレス決済にも幅広く対応しています</p>
+    <div class="md:flex md:gap-8 md:items-center">
+      <ul class="md:flex-1 space-y-3 mb-6 md:mb-0">
+        <li class="payment-item flex items-start gap-3"><i class="fas fa-money-bill-wave text-green-500 mt-1 w-5 text-center"></i><div><div class="font-bold text-sm">現金・銀行振込</div></div></li>
+        <li class="payment-item flex items-start gap-3"><i class="fas fa-credit-card text-blue-500 mt-1 w-5 text-center"></i><div><div class="font-bold text-sm">クレジットカード（タッチ決済可）</div><p class="text-xs text-gray-500">VISA／Mastercard／JCB／AMEX／Diners／Discover／銀聯</p></div></li>
+        <li class="payment-item flex items-start gap-3"><i class="fas fa-train text-pink-500 mt-1 w-5 text-center"></i><div><div class="font-bold text-sm">交通系電子マネー</div><p class="text-xs text-gray-500">Suica／PASMO／toica／manaca／ICOCA ほか</p></div></li>
+        <li class="payment-item flex items-start gap-3"><i class="fas fa-wifi text-amber-500 mt-1 w-5 text-center"></i><div><div class="font-bold text-sm">電子マネー</div><p class="text-xs text-gray-500">iD／QUICPay／WAON／nanaco／楽天Edy</p></div></li>
+        <li class="payment-item flex items-start gap-3"><i class="fas fa-qrcode text-red-500 mt-1 w-5 text-center"></i><div><div class="font-bold text-sm">QRコード決済</div><p class="text-xs text-gray-500">PayPay／d払い／au PAY／メルペイ／AEON Pay／teppay／Alipay+／WeChat Pay／銀聯QR</p></div></li>
+      </ul>
+      <div class="md:flex-1 flex justify-center">
+        <img src="/static/images/payment-methods.jpg" alt="対応決済ブランド一覧（クレジットカード・交通系電子マネー・電子マネー・QRコード決済）" class="w-full max-w-sm rounded-xl border border-gray-200 shadow-sm" loading="lazy">
+      </div>
     </div>
   </div>
 </section>
@@ -499,9 +521,8 @@ export const topPage = (c: Context) => {
           <i class="fas fa-chevron-down text-gray-400 text-xs transition-transform"></i>
         </button>
         <div class="faq-answer px-4 pb-4 hidden">
-          <p class="text-sm text-gray-600 mb-3">現金一括、各種クレジットカード、銀行振込に対応しています。</p>
-          <img src="/static/images/payment-cards.png" alt="対応カードブランド: VISA, Mastercard, JCB, American Express, Diners Club, Discover, UnionPay, JCB PREMO（タッチ決済対応）" class="max-w-xs" loading="lazy">
-          <p class="text-xs text-gray-400 mt-1">※タッチ決済にも対応しております</p>
+          <p class="text-sm text-gray-600 mb-3">現金一括、銀行振込のほか、<strong>クレジットカード（タッチ決済可）・交通系電子マネー・iD／QUICPay等の電子マネー・PayPay等のQRコード決済</strong>に対応しています。</p>
+          <img src="/static/images/payment-methods.jpg" alt="対応決済: VISA, Mastercard, JCB, American Express, Diners Club, Discover, UnionPay（銀聯）, 交通系電子マネー（Kitaca, Suica, PASMO, toica, manaca, ICOCA, SUGOCA, nimoca, はやかけん）, QUICPay, iD, WAON, nanaco, 楽天Edy, PayPay, d払い, teppay, AEON Pay, au PAY, メルペイ, Alipay+, WeChat Pay, 銀聯QR" class="w-full max-w-sm rounded-lg border border-gray-200" loading="lazy">
         </div>
       </div>
       <div class="bg-gray-50 rounded-xl border border-gray-200 overflow-hidden">
