@@ -9,7 +9,7 @@ import { subsidyPage } from './pages/subsidy'
 import { createCityPageHandler, createCityIndexHandler, allCityRoutes, allCitySlugs } from './pages/area-city'
 import { createTroublePageHandler, guideIndexHandler, allTroubleSlugs } from './pages/guide'
 import { warrantyPage } from './pages/warranty'
-import { SITE_URL, BUSINESS } from './config'
+import { SITE_URL, BUSINESS, FORM_URL } from './config'
 
 const app = new Hono()
 
@@ -83,6 +83,7 @@ app.get('/llms.txt', (c) => c.text(`# ${BUSINESS.brand}（${BUSINESS.company}）
 - 電話: ${BUSINESS.telephone}（営業時間外も受付）
 - FAX: ${BUSINESS.fax}
 - メール: ${BUSINESS.email}
+- お問い合わせフォーム: ${FORM_URL}
 - 営業時間: 平日 8:30〜17:30
 - 対応エリア: 袋井市、磐田市、掛川市、浜松市、森町、菊川市、御前崎市、牧之原市、島田市、吉田町
 - 許認可: 袋井市指定給水装置工事事業者、電気工事業（静岡県知事届出第700494号）

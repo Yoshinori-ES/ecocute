@@ -1,6 +1,6 @@
 // 共通レイアウト - 全ページの共通HTML構造
 // SEO + 構造化データ + スマホファースト設計
-import { SITE_URL, BUSINESS, OGP_IMAGE, PAGE_NAMES } from '../config'
+import { SITE_URL, BUSINESS, OGP_IMAGE, PAGE_NAMES, FORM_URL } from '../config'
 
 interface LayoutOptions {
   title: string
@@ -19,7 +19,10 @@ const floatingCTA = `
     <a href="tel:05017201813" class="flex-1 flex items-center justify-center gap-1.5 bg-gradient-to-r from-orange-500 to-red-500 text-white font-bold py-2.5 rounded-xl text-sm shadow-lg active:scale-95 transition-transform">
       <i class="fas fa-phone-alt text-xs"></i>
       <span>電話する</span>
-      
+    </a>
+    <a href="${FORM_URL}" target="_blank" rel="noopener" class="contact-form-link flex-1 flex items-center justify-center gap-1.5 bg-gradient-to-r from-green-500 to-emerald-600 text-white font-bold py-2.5 rounded-xl text-sm shadow-lg active:scale-95 transition-transform">
+      <i class="fas fa-edit text-xs"></i>
+      <span>フォーム</span>
     </a>
     <a href="mailto:kaden@estech.info" class="flex-1 flex items-center justify-center gap-1.5 bg-gradient-to-r from-blue-500 to-blue-600 text-white font-bold py-2.5 rounded-xl text-sm shadow-lg active:scale-95 transition-transform">
       <i class="fas fa-envelope text-xs"></i>
@@ -116,6 +119,7 @@ const footer = `
           <li><i class="fas fa-phone-alt w-5 text-orange-400"></i>TEL: <a href="tel:05017201813" class="hover:text-orange-400">050-1720-1813</a><span class="text-xs text-gray-500 ml-1">（時間外も受付対応）</span></li>
           <li><i class="fas fa-fax w-5 text-blue-400"></i>FAX: 050-1808-3052</li>
           <li><i class="fas fa-envelope w-5 text-green-400"></i>Mail: <a href="mailto:kaden@estech.info" class="hover:text-orange-400">kaden@estech.info</a></li>
+          <li><i class="fas fa-edit w-5 text-emerald-400"></i><a href="${FORM_URL}" target="_blank" rel="noopener" class="contact-form-link hover:text-orange-400 underline">お問い合わせフォーム</a><span class="text-xs text-gray-500 ml-1">（24時間受付）</span></li>
         </ul>
       </div>
       <div>

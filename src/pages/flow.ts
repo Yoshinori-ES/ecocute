@@ -1,6 +1,6 @@
 import type { Context } from 'hono'
 import { layout } from './layout'
-import { SITE_URL } from '../config'
+import { SITE_URL, FORM_URL } from '../config'
 
 export const flowPage = (c: Context) => {
   const content = `
@@ -26,7 +26,7 @@ export const flowPage = (c: Context) => {
           <div class="w-12 h-12 bg-gradient-to-br from-orange-400 to-orange-600 text-white rounded-full flex items-center justify-center text-sm font-black flex-shrink-0 shadow-lg z-10 border-4 border-white">1</div>
           <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-5 flex-1">
             <h3 class="font-bold text-lg mb-1"><i class="fas fa-phone-alt text-orange-400 mr-2"></i>お問い合わせ</h3>
-            <p class="text-sm text-gray-600 leading-relaxed">お電話・メール・FAXのいずれかでお気軽にお問い合わせください。<strong>時間外も受付対応</strong>いたします。</p>
+            <p class="text-sm text-gray-600 leading-relaxed">お電話・メール・FAX・Webフォームのいずれかでお気軽にお問い合わせください。<strong>時間外も受付対応</strong>いたします。</p>
             <div class="flex flex-wrap gap-2 mt-3">
               <a href="tel:05017201813" class="inline-flex items-center gap-1 bg-orange-100 text-orange-700 px-3 py-1.5 rounded-lg text-xs font-bold hover:bg-orange-200 transition-colors">
                 <i class="fas fa-phone-alt"></i>050-1720-1813
@@ -37,6 +37,9 @@ export const flowPage = (c: Context) => {
               <span class="inline-flex items-center gap-1 bg-gray-100 text-gray-700 px-3 py-1.5 rounded-lg text-xs font-bold">
                 <i class="fas fa-fax"></i>050-1808-3052
               </span>
+              <a href="${FORM_URL}" target="_blank" rel="noopener" class="contact-form-link inline-flex items-center gap-1 bg-green-100 text-green-700 px-3 py-1.5 rounded-lg text-xs font-bold hover:bg-green-200 transition-colors">
+                <i class="fas fa-edit"></i>お問い合わせフォーム
+              </a>
             </div>
           </div>
         </div>

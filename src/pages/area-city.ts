@@ -1,6 +1,6 @@
 import type { Context } from 'hono'
 import { layout } from './layout'
-import { SITE_URL } from '../config'
+import { SITE_URL, FORM_URL } from '../config'
 
 // ===================================================================
 // 都市別ロングテールSEOページ自動生成
@@ -489,6 +489,9 @@ function generateCityPage(city: CityData, category: ServiceCategory): string {
       </a>
       <a href="mailto:kaden@estech.info" class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold px-8 py-4 rounded-xl text-lg transition-all active:scale-95">
         <i class="fas fa-envelope"></i>メールで相談
+      </a>
+      <a href="${FORM_URL}" target="_blank" rel="noopener" class="contact-form-link inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold px-8 py-4 rounded-xl text-lg shadow-lg transition-all active:scale-95">
+        <i class="fas fa-edit"></i>フォームで相談
       </a>
     </div>
   </div>

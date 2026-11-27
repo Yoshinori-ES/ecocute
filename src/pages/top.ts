@@ -1,6 +1,6 @@
 import type { Context } from 'hono'
 import { layout } from './layout'
-import { SITE_URL } from '../config'
+import { SITE_URL, FORM_URL } from '../config'
 
 // よくある質問（画面表示と同じ内容をAI検索・Google向けに構造化）
 const faqLD = {
@@ -73,6 +73,10 @@ export const topPage = (c: Context) => {
               <div class="text-[10px] font-normal text-orange-100">時間外もスムーズにご案内</div>
               <div>050-1720-1813</div>
             </div>
+          </a>
+          <a href="${FORM_URL}" target="_blank" rel="noopener" class="contact-form-link flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold px-6 py-4 rounded-xl shadow-lg transition-all active:scale-95">
+            <i class="fas fa-edit"></i>
+            <span>フォームで問い合わせ</span>
           </a>
           <a href="mailto:kaden@estech.info" class="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur border border-white/30 text-white font-bold px-6 py-4 rounded-xl transition-all active:scale-95">
             <i class="fas fa-envelope"></i>
@@ -369,7 +373,7 @@ export const topPage = (c: Context) => {
           <div class="absolute left-3 md:relative md:left-auto w-7 h-7 bg-orange-500 text-white rounded-full flex items-center justify-center text-sm font-bold shadow z-10">1</div>
           <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-4 flex-1 md:text-center w-full">
             <h3 class="font-bold mb-1"><i class="fas fa-phone-alt text-orange-400 mr-1"></i>お問い合わせ</h3>
-            <p class="text-xs text-gray-500">電話・メール・FAXいずれかでご連絡。時間外も受付対応。</p>
+            <p class="text-xs text-gray-500">電話・メール・FAX・フォームいずれかでご連絡。時間外も受付対応。</p>
           </div>
         </div>
         <div class="flex md:flex-col items-start md:items-center gap-4 md:gap-2 relative pl-14 md:pl-0">
@@ -573,6 +577,10 @@ export const topPage = (c: Context) => {
           <div class="text-[10px] font-normal text-orange-100">時間外も受付対応</div>
           <div>050-1720-1813</div>
         </div>
+      </a>
+      <a href="${FORM_URL}" target="_blank" rel="noopener" class="contact-form-link flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold px-8 py-4 rounded-xl shadow-lg transition-all active:scale-95">
+        <i class="fas fa-edit"></i>
+        <span>フォームで問い合わせ</span>
       </a>
       <a href="mailto:kaden@estech.info" class="flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 backdrop-blur border border-white/30 text-white font-bold px-8 py-4 rounded-xl transition-all active:scale-95">
         <i class="fas fa-envelope"></i>

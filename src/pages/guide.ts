@@ -1,6 +1,6 @@
 import type { Context } from 'hono'
 import { layout } from './layout'
-import { SITE_URL } from '../config'
+import { SITE_URL, FORM_URL } from '../config'
 
 // ===================================================================
 // トラブル系ロングテールKWページ
@@ -157,7 +157,7 @@ const troublePages: TroublePage[] = [
       <div class="space-y-4">
         <div class="flex items-start gap-3">
           <span class="bg-sky-500 text-white text-xs font-bold w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0">1</span>
-          <div><h3 class="font-bold text-sm">お電話・メールでご連絡</h3><p class="text-xs text-gray-600">時間外も受付対応。症状やエラーコードをお伝えください。</p></div>
+          <div><h3 class="font-bold text-sm">お電話・メール・フォームでご連絡</h3><p class="text-xs text-gray-600">時間外も受付対応。症状やエラーコードをお伝えください。</p></div>
         </div>
         <div class="flex items-start gap-3">
           <span class="bg-sky-500 text-white text-xs font-bold w-7 h-7 rounded-full flex items-center justify-center flex-shrink-0">2</span>
@@ -479,6 +479,9 @@ export function createTroublePageHandler(slug: string) {
       </a>
       <a href="mailto:kaden@estech.info" class="inline-flex items-center justify-center gap-2 bg-white/10 hover:bg-white/20 border border-white/30 text-white font-bold px-8 py-4 rounded-xl text-lg transition-all active:scale-95">
         <i class="fas fa-envelope"></i>メールで相談
+      </a>
+      <a href="${FORM_URL}" target="_blank" rel="noopener" class="contact-form-link inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold px-8 py-4 rounded-xl text-lg shadow-lg transition-all active:scale-95">
+        <i class="fas fa-edit"></i>フォームで相談
       </a>
     </div>
   </div>

@@ -1,6 +1,6 @@
 import type { Context } from 'hono'
 import { layout } from './layout'
-import { SITE_URL } from '../config'
+import { SITE_URL, FORM_URL } from '../config'
 
 export const warrantyPage = (c: Context) => {
   const content = `
@@ -138,7 +138,7 @@ export const warrantyPage = (c: Context) => {
         </h3>
         <div class="space-y-3 text-sm text-gray-700">
           <p class="leading-relaxed">保証期間内に不具合が発生した場合は、以下の方法でお問い合わせください。</p>
-          <div class="grid sm:grid-cols-3 gap-3">
+          <div class="grid sm:grid-cols-2 gap-3">
             <a href="tel:05017201813" class="flex items-center gap-2 bg-orange-50 border border-orange-200 rounded-xl p-3 hover:bg-orange-100 transition-colors">
               <i class="fas fa-phone-alt text-orange-500"></i>
               <div>
@@ -160,6 +160,13 @@ export const warrantyPage = (c: Context) => {
                 <div class="font-bold text-gray-700">050-1808-3052</div>
               </div>
             </div>
+            <a href="${FORM_URL}" target="_blank" rel="noopener" class="contact-form-link flex items-center gap-2 bg-green-50 border border-green-200 rounded-xl p-3 hover:bg-green-100 transition-colors">
+              <i class="fas fa-edit text-green-600"></i>
+              <div>
+                <div class="text-xs text-gray-500">Webフォーム</div>
+                <div class="font-bold text-green-700">お問い合わせフォーム</div>
+              </div>
+            </a>
           </div>
           <p class="leading-relaxed text-gray-600"><i class="fas fa-info-circle text-sky-500 mr-1"></i>お問い合わせの際は、工事完了時にお渡しする<strong>工事完了報告書</strong>の内容をお手元にご用意ください。</p>
         </div>

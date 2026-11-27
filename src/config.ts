@@ -22,6 +22,9 @@ export const BUSINESS = {
   sameAs: [] as string[]
 }
 
+// お問い合わせフォーム（Googleフォーム）
+export const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSe1XJig49WplRjqDUfr3c3LgzO8ICBnqlq-XCQGNzc4fMC0DQ/viewform'
+
 export const OGP_IMAGE = `${SITE_URL}/static/images/ogp.jpg`
 
 // パンくずリスト用のページ名

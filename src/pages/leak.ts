@@ -1,6 +1,6 @@
 import type { Context } from 'hono'
 import { layout } from './layout'
-import { SITE_URL } from '../config'
+import { SITE_URL, FORM_URL } from '../config'
 
 export const leakPage = (c: Context) => {
   const content = `
@@ -153,7 +153,7 @@ export const leakPage = (c: Context) => {
               応急処置が終わったら、お気軽にご連絡ください。<strong>時間外も受付対応</strong>いたします。
               状況をお聞きし、担当者から折り返しご連絡いたします。
             </p>
-            <div class="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <a href="tel:05017201813" class="flex items-center justify-center gap-2 bg-orange-500 hover:bg-orange-600 text-white font-bold py-3 rounded-xl transition-colors active:scale-95 shadow">
                 <i class="fas fa-phone-alt"></i>
                 <div class="leading-tight">
@@ -172,6 +172,10 @@ export const leakPage = (c: Context) => {
                   <div>050-1808-3052</div>
                 </div>
               </div>
+              <a href="${FORM_URL}" target="_blank" rel="noopener" class="contact-form-link flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-bold py-3 rounded-xl transition-colors active:scale-95 shadow">
+                <i class="fas fa-edit"></i>
+                <span class="text-sm">フォーム</span>
+              </a>
             </div>
           </div>
         </div>
