@@ -54,7 +54,8 @@ export const topPage = (c: Context) => {
         </p>
         
         <!-- 補助金バナー -->
-        <a href="/subsidy" class="inline-flex items-center gap-3 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold px-5 py-3 rounded-xl mb-6 shadow-lg transition-all group">
+        <div class="mb-6">
+        <a href="/subsidy" class="inline-flex items-center gap-3 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white font-bold px-5 py-3 rounded-xl shadow-lg transition-all group">
           <div class="w-10 h-10 bg-white/20 rounded-lg flex items-center justify-center">
             <i class="fas fa-yen-sign text-xl"></i>
           </div>
@@ -64,6 +65,8 @@ export const topPage = (c: Context) => {
           </div>
           <i class="fas fa-chevron-right text-green-200 group-hover:translate-x-1 transition-transform"></i>
         </a>
+        <p id="hero-subsidy-pitch" class="text-xs md:text-sm text-green-100 mt-2 max-w-lg leading-relaxed"><i class="fas fa-award text-yellow-300 mr-1"></i>公式登録事業者による無料ワンストップ申請代行・有資格者による完全自社施工のため、実質ご負担額に自信あり</p>
+        </div>
         
         <!-- CTA ボタン群 -->
         <div class="flex flex-col sm:flex-row gap-3">
@@ -229,10 +232,10 @@ export const topPage = (c: Context) => {
         <div>
           <div class="flex items-center gap-2 mb-1">
             <span class="text-amber-600 font-black text-sm">04</span>
-            <h3 class="text-lg font-bold">機器の格安販売＋補助金対応｜家計にやさしい</h3>
+            <h3 class="text-lg font-bold">機器の格安販売＋補助金の無料申請代行｜家計にやさしい</h3>
           </div>
           <p class="text-sm text-gray-600 leading-relaxed">
-            エコキュート専門だからこそ実現できる<strong>格安価格</strong>。さらに<strong>給湯省エネ2026事業（国の補助金）に対応</strong>。
+            エコキュート専門だからこそ実現できる<strong>格安価格</strong>。さらに<strong>給湯省エネ2026事業</strong>の<strong>公式登録事業者による無料ワンストップ申請代行・有資格者による完全自社施工</strong>のため、<strong class="text-orange-600">実質ご負担額に自信あり</strong>。
             最大12万円の補助を受けられる可能性があります。お見積りは0円。強引な営業は一切いたしません。
           </p>
           <a href="/subsidy" class="inline-flex items-center gap-1 mt-2 text-xs text-amber-600 hover:text-amber-700 font-medium">

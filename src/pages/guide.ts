@@ -267,11 +267,12 @@ const troublePages: TroublePage[] = [
       <p class="text-sm text-gray-600 mb-4 text-center">
         <strong>給湯省エネ2026事業</strong>を活用すれば、エコキュート交換費用を<strong class="text-green-600 text-lg">最大12万円削減</strong>できます。
       </p>
+      <p class="text-sm font-bold text-green-800 bg-white/70 border border-green-200 rounded-lg px-4 py-3 mb-4 text-center"><i class="fas fa-award text-yellow-500 mr-1"></i>当店は公式登録事業者による無料ワンストップ申請代行・有資格者による完全自社施工のため、実質ご負担額に自信あり</p>
       <div class="bg-white rounded-xl p-4 mb-3">
         <ul class="space-y-2 text-sm">
-          <li class="flex items-start gap-2"><i class="fas fa-check-circle text-green-500 mt-0.5"></i>基本補助額：<strong>8万円</strong>（高効率エコキュート）</li>
-          <li class="flex items-start gap-2"><i class="fas fa-check-circle text-green-500 mt-0.5"></i>性能加算：最大<strong>+4万円</strong>（A要件対応機種）</li>
-          <li class="flex items-start gap-2"><i class="fas fa-check-circle text-green-500 mt-0.5"></i>撤去加算：<strong>+1万円</strong>（電気温水器撤去の場合）</li>
+          <li class="flex items-start gap-2"><i class="fas fa-check-circle text-green-500 mt-0.5"></i>基本補助額：<strong>7万円</strong>（対象のエコキュート）</li>
+          <li class="flex items-start gap-2"><i class="fas fa-check-circle text-green-500 mt-0.5"></i>性能加算：<strong>+3万円</strong>（性能加算要件を満たす高効率機種）</li>
+          <li class="flex items-start gap-2"><i class="fas fa-check-circle text-green-500 mt-0.5"></i>撤去加算：電気温水器 <strong>+2万円</strong>／電気蓄熱暖房機 <strong>+4万円</strong>（1台あたり）</li>
         </ul>
       </div>
       <p class="text-center"><a href="/subsidy" class="inline-flex items-center gap-1 bg-green-600 hover:bg-green-700 text-white font-bold px-6 py-3 rounded-xl transition-colors"><i class="fas fa-arrow-right"></i>補助金の詳細を見る</a></p>

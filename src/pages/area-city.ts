@@ -171,7 +171,7 @@ const serviceCategories: ServiceCategory[] = [
         <li class="flex items-start gap-2"><i class="fas fa-check-circle text-green-500 mt-0.5"></i>既設エコキュートからの入替工事</li>
         <li class="flex items-start gap-2"><i class="fas fa-check-circle text-green-500 mt-0.5"></i>電気温水器・ガス給湯器からの切り替え</li>
         <li class="flex items-start gap-2"><i class="fas fa-check-circle text-green-500 mt-0.5"></i>基礎工事・配管工事込みの安心パック</li>
-        <li class="flex items-start gap-2"><i class="fas fa-check-circle text-green-500 mt-0.5"></i>給湯省エネ2026事業で<strong class="text-green-600">最大12万円の補助金</strong>対応</li>
+        <li class="flex items-start gap-2"><i class="fas fa-check-circle text-green-500 mt-0.5"></i>給湯省エネ2026事業で<strong class="text-green-600">最大12万円の補助金</strong>｜公式登録事業者による無料ワンストップ申請代行</li>
       </ul>
     </div>
 
@@ -235,7 +235,7 @@ const serviceCategories: ServiceCategory[] = [
         <li class="flex items-start gap-2"><i class="fas fa-check-circle text-green-500 mt-0.5"></i>エコキュート（ヒートポンプ式）への交換</li>
         <li class="flex items-start gap-2"><i class="fas fa-check-circle text-green-500 mt-0.5"></i>電気温水器の交換・エコキュート化</li>
         <li class="flex items-start gap-2"><i class="fas fa-check-circle text-green-500 mt-0.5"></i>ガス給湯器からの切り替え相談</li>
-        <li class="flex items-start gap-2"><i class="fas fa-check-circle text-green-500 mt-0.5"></i>給湯省エネ2026事業の補助金サポート</li>
+        <li class="flex items-start gap-2"><i class="fas fa-check-circle text-green-500 mt-0.5"></i>給湯省エネ2026事業の無料ワンストップ申請代行（公式登録事業者）</li>
       </ul>
     </div>
 
